@@ -732,14 +732,25 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 2;
-            background: var(--bg-card);
+            background: #000;
+        }
+
+        .main-visual-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.4) 100%);
+            z-index: 3;
+            pointer-events: none;
         }
 
         .main-visual-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
             transition: transform 0.6s ease;
+            filter: contrast(1.1) brightness(0.9);
         }
 
         .main-visual-card:hover img {
@@ -3126,7 +3137,7 @@
                 <div class="about-visual-column animate-on-scroll delay-100">
                     <div class="about-visual-group">
                         <div class="main-visual-card">
-                            <img src="assets/about-main.png" alt="Cyber Visual">
+                            <img src="assets/about-personal.png" alt="Sergio Personal Visual">
                         </div>
                         <div class="sub-visual sv-1">
                             <img src="assets/about-sub1.png" alt="Core Icon">
