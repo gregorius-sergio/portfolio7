@@ -543,28 +543,35 @@
             gap: 12px;
         }
 
-        .nav-profile-img {
+        .nav-logo-dark, .nav-logo-light {
             width: 34px;
             height: 34px;
             border-radius: 50%;
             object-fit: cover;
-            filter: grayscale(100%) contrast(1.2) brightness(0.8);
-            mix-blend-mode: luminosity;
             border: 1px solid var(--border-color);
             transition: all 0.4s ease;
         }
 
-        [data-theme="light"] .nav-profile-img {
-            content: url("assets/profile-hero.png");
-            mix-blend-mode: normal !important;
-            filter: none !important;
-            opacity: 1 !important;
-            border-color: rgba(123, 31, 162, 0.4);
-            background-color: transparent !important;
-            /* Menghapus background gelap agar logo baru menyatu */
+        .nav-logo-dark {
+            filter: grayscale(100%) contrast(1.2) brightness(0.8);
+            mix-blend-mode: luminosity;
         }
 
-        .logo:hover .nav-profile-img {
+        .nav-logo-light {
+            display: none;
+        }
+
+        [data-theme="light"] .nav-logo-dark {
+            display: none;
+        }
+
+        [data-theme="light"] .nav-logo-light {
+            display: block;
+            mix-blend-mode: normal !important;
+            filter: none !important;
+        }
+
+        .logo:hover .nav-logo-dark, .logo:hover .nav-logo-light {
             filter: grayscale(0%) brightness(1);
             transform: scale(1.1);
             mix-blend-mode: normal;
@@ -572,7 +579,7 @@
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
         }
 
-        [data-theme="light"] .logo:hover .nav-profile-img {
+        [data-theme="light"] .logo:hover .nav-logo-light {
             border-color: var(--accent-purple);
             box-shadow: 0 0 15px rgba(123, 31, 162, 0.2);
         }
@@ -3099,7 +3106,8 @@
 
     <header>
         <div class="logo">
-            <img src="assets/profile-hero.png" alt="Profile" class="nav-profile-img">
+            <img src="assets/profile-hero.png" alt="Profile Dark" class="nav-logo-dark">
+            <img src="assets/profile-nav.png" alt="Profile Light" class="nav-logo-light">
             GREGORIUS SERGIO
         </div>
         <div style="display: flex; align-items: center;">
@@ -3199,7 +3207,7 @@
                 <div class="about-visual-column animate-on-scroll delay-100">
                     <div class="about-visual-group">
                         <div class="main-visual-card">
-                            <img src="assets/about-personal.png" alt="Sergio Personal Visual">
+                            <img src="assets/about-personal-transparent.png" alt="Sergio Personal Visual">
                         </div>
                         <div class="sub-visual sv-1">
                             <img src="assets/profile-hero.png" alt="Sergio Logo">
