@@ -2999,7 +2999,10 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            padding: 2rem;
+            padding: 3rem 2rem;
+            min-height: 250px;
+            width: 100%;
+            z-index: 5;
         }
 
         .gallery-card {
@@ -3011,8 +3014,9 @@
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             border: 2px solid rgba(255, 255, 255, 0.1);
             position: relative;
-            margin-left: -60px; /* Overlap from left to keep centering */
-            background: #111;
+            margin-left: -80px; /* Increased overlap for tighter Vibe */
+            background: #000;
+            z-index: 10;
         }
 
         .gallery-card:first-child { margin-left: 0; }
