@@ -630,11 +630,12 @@
         }
 
         /* --- ABOUT CONTAINER REDESIGNED (SPLIT 2-COLUMN LAYOUT) --- */
+        /* --- ABOUT CONTAINER REDESIGNED (SPLIT 2-COLUMN LAYOUT) --- */
         .about-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            max-width: 1200px;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 6rem;
+            max-width: 1240px;
             margin: 0 auto;
             align-items: center;
         }
@@ -644,26 +645,32 @@
         }
 
         .about-heading {
-            font-size: 1rem;
-            color: var(--accent-gold);
+            font-size: 0.85rem;
+            color: #fff;
+            background: rgba(157, 78, 221, 0.15);
+            padding: 6px 16px;
+            border-radius: 50px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
             display: inline-block;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            font-weight: 600;
         }
 
         [data-theme="light"] .about-heading {
             color: var(--accent-purple);
-            font-weight: 800;
+            background: rgba(123, 31, 162, 0.05);
+            border-color: rgba(123, 31, 162, 0.2);
         }
 
         .about-text h3 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 800;
             color: var(--text-main);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             line-height: 1.1;
-            letter-spacing: -1.5px;
+            letter-spacing: -2px;
         }
 
         [data-theme="light"] .about-text h3 {
@@ -671,135 +678,171 @@
         }
 
         .about-text p {
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
             line-height: 1.8;
+            max-width: 540px;
         }
 
-        /* EXTREME CONTRAST FIX FOR LIGHT MODE */
         [data-theme="light"] .about-text p {
-            color: #111 !important;
-            /* Hitam pekat */
+            color: #333 !important;
             font-weight: 500;
-            /* Ditebalkan agar mudah dibaca */
         }
 
-        /* About Button (Reference Style) */
         .about-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 35px;
-            margin-top: 1rem;
-            border-radius: 50px;
-            background: linear-gradient(135deg, var(--accent-purple), #5a189a);
+            padding: 16px 40px;
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #6236FF, #9747FF);
             color: #fff;
             font-weight: 700;
             text-decoration: none;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            box-shadow: 0 10px 20px rgba(157, 78, 221, 0.3);
+            box-shadow: 0 10px 30px rgba(98, 54, 255, 0.3);
             border: none;
             cursor: pointer;
         }
 
         .about-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(157, 78, 221, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(98, 54, 255, 0.5);
+            filter: brightness(1.1);
         }
 
-        [data-theme="light"] .about-btn {
-            background: linear-gradient(135deg, var(--accent-gold), #e69d00);
-            color: #000;
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-        }
-
-        [data-theme="light"] .about-btn:hover {
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
-        }
-
-        /* About Visual Card (Reference Style) */
-        .about-visual-card {
-            background: #0f061c;
-            border-radius: 24px;
-            padding: 1.2rem;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        /* --- NEW VISUAL GROUP (REWRITTEN) --- */
+        .about-visual-group {
             position: relative;
+            width: 100%;
+            height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .main-visual-card {
+            width: 360px;
+            height: 480px;
+            border-radius: 180px 180px 40px 40px;
             overflow: hidden;
-            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+            background: var(--bg-card);
+        }
+
+        .main-visual-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: transform 0.6s ease;
         }
 
-        .about-visual-card:hover {
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-10px);
+        .main-visual-card:hover img {
+            transform: scale(1.05);
         }
 
-        [data-theme="light"] .about-visual-card {
-            background: #fff;
-            border-color: #ddd;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        /* Sub Visuals (Floating Icons) */
+        .sub-visual {
+            position: absolute;
+            z-index: 3;
+            border-radius: 24px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .card-ui-dots {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 1.2rem;
-            padding-left: 0.5rem;
-        }
-
-        .card-ui-dots .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .card-ui-dots .dot:nth-child(1) {
-            background: #ff5f56;
-        }
-
-        .card-ui-dots .dot:nth-child(2) {
-            background: #ffbd2e;
-        }
-
-        .card-ui-dots .dot:nth-child(3) {
-            background: #27c93f;
-        }
-
-        .about-visual-img {
+        .sub-visual img {
             width: 100%;
-            height: auto;
-            border-radius: 16px;
-            display: block;
-            filter: grayscale(30%) contrast(1.1);
-            transition: filter 0.4s ease;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+            height: 100%;
+            object-fit: cover;
         }
 
-        .about-visual-card:hover .about-visual-img {
-            filter: grayscale(0%) contrast(1.1);
+        .sv-1 {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .sv-2 {
+            width: 140px;
+            height: 140px;
+            bottom: 5%;
+            left: -20px;
+            animation: float 8s ease-in-out infinite 1s;
+        }
+
+        .sv-3 {
+            width: 160px;
+            height: 160px;
+            bottom: -5%;
+            left: 200px;
+            border-radius: 40px;
+            animation: float 7s ease-in-out infinite 0.5s;
+        }
+
+        .sv-4 {
+            width: 50px;
+            height: 50px;
+            bottom: 12%;
+            left: 170px;
+            border-radius: 12px;
+            animation: float 5s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        .sub-visual:hover {
+            transform: scale(1.1) translateY(-10px) !important;
+            z-index: 10;
+            border-color: var(--accent-purple);
         }
 
         @media (max-width: 900px) {
             .about-container {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 4rem;
                 text-align: center;
+                padding: 0 20px;
             }
 
             .about-text {
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
-            .about-visual-card {
-                transform: none;
-                margin: 0 1rem;
+            .about-visual-group {
+                justify-content: center;
+                height: 480px;
+                margin-bottom: 2rem;
+                padding-left: 50px; /* Offset for sv-1/sv-2 */
             }
 
-            .about-visual-card:hover {
-                transform: translateY(-5px);
+            .main-visual-card {
+                width: 280px;
+                height: 380px;
+                border-radius: 140px 140px 30px 30px;
             }
+
+            .sv-1 { width: 70px; height: 70px; left: -20px; }
+            .sv-2 { width: 100px; height: 100px; left: 0; }
+            .sv-3 { width: 120px; height: 120px; left: 140px; }
+            .sv-4 { display: none; }
         }
 
         /* --- NEW WORKBENCH SECTIONS (EXPANDABLE ACCORDION) --- */
@@ -3078,32 +3121,41 @@
         </section>
 
         <!-- About Me Section -->
-        <section id="about" style="padding-top: 80px;">
+        <section id="about" style="padding-top: 120px; padding-bottom: 80px;">
             <div class="about-container">
 
-                <div class="about-text animate-on-scroll delay-100">
+                <div class="about-visual-column animate-on-scroll delay-100">
+                    <div class="about-visual-group">
+                        <div class="main-visual-card">
+                            <img src="assets/about-main.png" alt="Cyber Visual">
+                        </div>
+                        <div class="sub-visual sv-1">
+                            <img src="assets/about-sub1.png" alt="Core Icon">
+                        </div>
+                        <div class="sub-visual sv-2">
+                            <img src="assets/about-sub2.png" alt="Flow Icon">
+                        </div>
+                        <div class="sub-visual sv-3">
+                            <img src="assets/about-sub3.png" alt="Focus Icon">
+                        </div>
+                        <div class="sub-visual sv-4">
+                            <!-- Small accent element -->
+                            <div style="width: 100%; height: 100%; background: var(--accent-purple); opacity: 0.6;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text animate-on-scroll delay-200">
                     <span class="about-heading">About Me</span>
                     <h3>Who is Sergio?</h3>
-                    <p> Saya adalah seseorang yang senang mengeksplorasi banyak hal. Saya tipe orang
+                    <p>Saya adalah seseorang yang senang mengeksplorasi banyak hal. Saya tipe orang
                         yang lebih suka belajar dengan cara mencoba langsung diimbangi dengan pembelajaran secara teori.
                     </p>
-                    <p> Untuk menjaga keseimbangan harian di luar ketertarikan saya pada dunia Crypto, saya terbiasa
+                    <p>Untuk menjaga keseimbangan harian di luar ketertarikan saya pada dunia Crypto, saya terbiasa
                         meluangkan waktu dengan aktif berolahraga, menjadikan musik untuk memberikan fokus, 
                         serta menikmati waktu luang dengan bermain game.</p>
 
                     <a href="#connect" class="about-btn">Lebih Lanjut</a>
-                </div>
-
-                <div class="about-visual animate-on-scroll delay-200">
-                    <div class="about-visual-card">
-                        <div class="card-ui-dots">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800"
-                            alt="Cyber Visual" class="about-visual-img">
-                    </div>
                 </div>
 
             </div>
