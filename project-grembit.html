@@ -492,7 +492,7 @@
         }
 
         [data-theme="light"] .nav-profile-img {
-            content: url("assets/profile-nav.png");
+            content: url("assets/profile-hero.png");
             mix-blend-mode: normal !important;
             filter: none !important;
             opacity: 1 !important;
@@ -3153,7 +3153,7 @@
 
     <header>
         <div class="logo">
-            <img src="assets/profile-hero.png"
+            <img src="assets/profile-nav.png"
                 alt="Profile" class="nav-profile-img">
             GREGORIUS SERGIO
         </div>
@@ -3692,8 +3692,20 @@
             card.style.zIndex = i;
         });
 
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            if (typeof reinitAurora === 'function') reinitAurora(newTheme);
+            if (typeof initGlobalGravity === 'function') initGlobalGravity();
+        }
+
         // Restore Navigation and Animations
         window.addEventListener('load', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
             // Re-init Aurora
             if (typeof reinitAurora === 'function') {
                 const savedTheme = localStorage.getItem('theme') || 'dark';
