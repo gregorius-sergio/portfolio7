@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grembit 10 Axiom | Gregorius Sergio</title>
+  <meta name="description"
+    content="Grembit 10 Axiom — algorithmic trading system on Binance Futures by Gregorius Sergio.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: { ink: '#0A0A0A', 'ink-soft': '#222222', cream: '#FAFAF8', y: '#FACC15', 'y-dark': '#EAB308' },
+          letterSpacing: { tightest: '-0.06em', tighter: '-0.04em' },
+          borderRadius: { bento: '20px' },
+          boxShadow: { 'bento-hover': '0 8px 30px rgba(0,0,0,0.12)', 'y': '0 8px 24px rgba(234,179,8,0.4)' },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .img-zoom img {
+      transition: transform .45s ease;
+    }
+
+    .img-zoom:hover img {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+
+<body class="bg-ink text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav id="nav"
+    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-ink/80 backdrop-blur-xl border-b border-white/5 transition-all">
+    <a href="index.html" class="flex items-center gap-2.5 font-bold text-sm text-white tracking-tight">
+      <img src="assets/profile-hero.png" alt=""
+        class="w-8 h-8 rounded-full object-cover ring-2 ring-white/10 grayscale">
+      Gregorius Sergio
+    </a>
+    <a href="index.html#projects"
+      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">←
+      All Projects</a>
+    <button id="hbg" onclick="toggleNav()"
+      class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer">
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+    </button>
+  </nav>
+  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-ink border-b border-white/10 flex-col px-6 py-5 gap-1">
+    <a href="index.html#about" onclick="closeNav()"
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-y transition-colors">About</a>
+    <a href="index.html#projects" onclick="closeNav()"
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-y transition-colors">← Projects</a>
+    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-y">Contact →</a>
+  </div>
+
+  <!-- ── HERO: BLACK ── -->
+  <section class="bg-ink pt-16 pb-0">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-16">
+      <!-- Breadcrumb -->
+      <div
+        class="flex items-center gap-2 text-[0.68rem] text-white/30 font-bold uppercase tracking-widest mb-10 reveal">
+        <a href="index.html" class="hover:text-y transition-colors">Home</a>
+        <span>›</span>
+        <a href="index.html#projects" class="hover:text-y transition-colors">Projects</a>
+        <span>›</span>
+        <span class="text-white/60">Grembit 10 Axiom</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <!-- Title card -->
+        <div
+          class="md:col-span-7 bg-ink-soft border border-white/10 rounded-bento p-10 flex flex-col justify-between min-h-[300px] reveal">
+          <div
+            class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit">
+            <span class="w-[4px] h-[4px] rounded-full bg-green-400"></span>Under Developing
+            <div>
+              <h1 class="text-[clamp(2.5rem,4.5vw,4rem)] font-black tracking-tightest leading-[1.05] text-white mb-4">
+                Grembit 10<br><span class="text-y">Axiom</span>
+              </h1>
+              <p class="text-white/50 text-sm leading-relaxed max-w-md">Sophisticated algorithmic trading system.
+                Multi-indicator confluence, dynamic risk management.</p>
+            </div>
+          </div>
+          <!-- Hero image -->
+          <div class="md:col-span-5 bg-y rounded-bento overflow-hidden min-h-[300px] img-zoom reveal">
+            <img src="assets/grembit10-cover.png" alt="Grembit 10 Axiom"
+              class="w-full h-full object-cover absolute inset-0" style="position:absolute;">
+            <div class="relative w-full h-full aspect-auto">
+              <img src="assets/grembit10-cover.png" alt="Grembit 10 Axiom" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <!-- Tech stack -->
+          <div
+            class="md:col-span-12 bg-ink-soft border border-white/10 rounded-bento p-6 flex flex-wrap gap-2 items-center reveal">
+            <span class="text-[0.65rem] font-bold text-white/40 uppercase tracking-widest mr-3">Stack:</span>
+            <span
+              class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Python</span>
+            <span class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Binance
+              API</span>
+            <span
+              class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Backtesting</span>
+            <span
+              class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">CCTX</span>
+            <span
+              class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Pandas</span>
+            <span
+              class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">NumPy</span>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ── OVERVIEW: WHITE ── -->
+  <section class="bg-white py-20">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">Overview</span>
+        <div class="flex-1 h-px bg-black/10"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div class="md:col-span-8 bg-ink rounded-bento p-10 reveal">
+          <h2 class="text-3xl font-black text-white tracking-tighter mb-5">What is Axiom?</h2>
+          <p class="text-white/60 text-sm leading-[1.85] mb-4">Grembit 10 (codename Axiom) adalah mesin perdagangan
+            otomatis sepenuhnya yang menargetkan kontrak perpetual Binance Futures. Mesin ini menggabungkan beberapa
+            indikator ke dalam satu model entri. Setiap perdagangan diatur oleh lapisan manajemen risiko dinamis.</p>
+        </div>
+        <div class="md:col-span-4 bg-y rounded-bento p-8 flex flex-col justify-between reveal">
+          <div class="text-[0.68rem] font-bold text-ink/40 uppercase tracking-widest">Key metric</div>
+          <div>
+            <div class="text-6xl font-black text-ink tracking-tightest leading-none">4+</div>
+            <div class="text-ink/60 text-sm mt-2 font-semibold">Penggunaan indikator tetap</div>
+          </div>
+        </div>
+        <!-- Features list -->
+        <div class="md:col-span-12 bg-cream border border-black/5 rounded-bento p-10 reveal">
+          <div class="flex items-center gap-3 mb-6">
+            <h3 class="text-ink font-black text-2xl tracking-tight">Key Features</h3>
+            <div class="flex-1 h-px bg-black/10"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
+              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Multi-indicator
+                Confluence</h4>
+              <p class="text-white/50 text-sm leading-relaxed">Validasi dengan penggunaan multi indikator yang
+                diterjemahkan melalui Python.</p>
+            </div>
+            <div
+              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
+              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Dynamic Risk Sizing
+              </h4>
+              <p class="text-white/50 text-sm leading-relaxed">Secara otomatis mengukur jumlah posisi menyesuaikan
+                dengan tingkat volatilitas dan manajemen resiko.</p>
+            </div>
+            <div
+              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
+              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Binance API</h4>
+              <p class="text-white/50 text-sm leading-relaxed">Penggunaan API untuk pengambilan data yang real dan jelas
+                melalui Binance API.</p>
+            </div>
+            <div
+              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
+              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Adaptive Trailing
+                Stop</h4>
+              <p class="text-white/50 text-sm leading-relaxed">Instruksi take profit yang efisien dan pengendalian
+                resiko yang patuh.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCREENSHOTS: CREAM ── -->
+  <section class="bg-cream py-20">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">Screenshots</span>
+        <div class="flex-1 h-px bg-black/10"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4">
+        <div
+          class="md:col-span-8 md:row-span-2 bg-ink rounded-bento overflow-hidden img-zoom reveal ring-1 ring-black/5 shadow-sm">
+          <img src="assets/grembit10-cover.png" alt="Screenshot 1" class="w-full h-full object-cover">
+        </div>
+        <div
+          class="md:col-span-4 md:row-span-1 bg-ink rounded-bento overflow-hidden img-zoom reveal ring-1 ring-black/5 shadow-sm">
+          <img src="assets/axiom10-2.png" alt="Screenshot 2" class="w-full h-full object-cover">
+        </div>
+        <div
+          class="md:col-span-4 md:row-span-1 bg-ink rounded-bento overflow-hidden img-zoom reveal ring-1 ring-black/5 shadow-sm">
+          <img src="assets/axiom10-3.png" alt="Screenshot 3" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT STRIP: BLACK ── -->
+  <section class="bg-ink py-16">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+      <div
+        class="bg-white rounded-bento p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+        <div>
+          <div class="text-[0.68rem] font-bold text-ink/70 uppercase tracking-widest mb-2">Tertarik?</div>
+          <h2 class="text-3xl font-black text-ink tracking-tighter">Silahkan berkenalan dengan saya.</h2>
+          <p class="text-ink/60 text-sm mt-1">Tertarik untuk membangun relasi atau berkolaborasi? Hubungi saya melalui
+            media sosial.</p>
+        </div>
+        <div class="flex flex-wrap gap-3 flex-shrink-0">
+          <a href="index.html#contact"
+            class="bg-y text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-y-dark transition-all hover:-translate-y-0.5 shadow-sm">See
+            Social Links →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink border-t border-white/5">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-14 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="md:col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 mb-4">
+          <img src="assets/profile-hero.png" alt=""
+            class="w-9 h-9 rounded-full object-cover ring-2 ring-white/10 grayscale">
+          <span class="font-black text-white text-base tracking-tight">Gregorius Sergio</span>
+        </a>
+        <p class="text-white/40 text-sm leading-relaxed max-w-xs">Focused on Self developing, Crypto Trading, and
+          learning new things. Based in
+          Pontianak, Indonesia..</p>
+        <div class="flex gap-3 mt-6">
+          <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">GH</a>
+          <a href="https://www.linkedin.com/in/gregorius-sergio-37762b300/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">LI</a>
+          <a href="https://www.instagram.com/gregorius_gesergio/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">IG</a>
+          <a href="https://www.tiktok.com/@gregoryp1.1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">TK</a>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Navigation</h5>
+        <ul class="space-y-3">
+          <li><a href="index.html#about" class="text-sm text-white/50 hover:text-white transition-colors">About</a></li>
+          <li><a href="index.html#skills" class="text-sm text-white/50 hover:text-white transition-colors">Skills</a>
+          </li>
+          <li><a href="index.html#projects"
+              class="text-sm text-white/50 hover:text-white transition-colors">Projects</a></li>
+          <li><a href="index.html#education"
+              class="text-sm text-white/50 hover:text-white transition-colors">Education</a></li>
+          <li><a href="index.html#contact" class="text-sm text-white/50 hover:text-white transition-colors">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Projects</h5>
+        <ul class="space-y-3">
+          <li><a href="project-grembit.html" class="text-sm text-y font-semibold">Grembit 10 Axiom</a></li>
+          <li><a href="project-grembit-vada.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Grembit VADA</a></li>
+          <li><a href="project-portfolio.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Portfolio Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5">
+      <div
+        class="w-full max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <span class="text-xs text-white/25">© 2025 Gregorius Sergio. All rights reserved.</span>
+        <span class="text-xs text-white/25">Built with <span class="text-y">Tailwind CSS and Vibe coded</span> ·
+          Deployed on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hbg = document.getElementById('hbg'), mnav = document.getElementById('mnav'), hbs = document.querySelectorAll('.hb');
+    function toggleNav() {
+      const o = hbg.classList.toggle('open');
+      mnav.style.display = o ? 'flex' : 'none';
+      hbs[0].style.transform = o ? 'translateY(7px) rotate(45deg)' : '';
+      hbs[1].style.opacity = o ? '0' : ''; hbs[2].style.transform = o ? 'translateY(-7px) rotate(-45deg)' : '';
+    }
+    function closeNav() { hbg.classList.remove('open'); mnav.style.display = 'none'; hbs.forEach(b => { b.style.transform = ''; b.style.opacity = ''; }); }
+    window.addEventListener('scroll', () => { document.getElementById('nav').style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.4)' : 'none'; }, { passive: true });
+    const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
