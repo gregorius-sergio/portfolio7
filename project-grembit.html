@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     .reveal {
       opacity: 0;
@@ -136,54 +137,70 @@
         <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">Overview</span>
         <div class="flex-1 h-px bg-black/10"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div class="md:col-span-8 bg-ink rounded-bento p-10 reveal">
-          <h2 class="text-3xl font-black text-white tracking-tighter mb-5">What is Axiom?</h2>
-          <p class="text-white/60 text-sm leading-[1.85] mb-4">Grembit 10 (codename Axiom) adalah mesin perdagangan
-            otomatis sepenuhnya yang menargetkan kontrak perpetual Binance Futures. Mesin ini menggabungkan beberapa
-            indikator ke dalam satu model entri. Setiap perdagangan diatur oleh lapisan manajemen risiko dinamis.</p>
-        </div>
-        <div class="md:col-span-4 bg-y rounded-bento p-8 flex flex-col justify-between reveal">
-          <div class="text-[0.68rem] font-bold text-ink/40 uppercase tracking-widest">Key metric</div>
-          <div>
-            <div class="text-6xl font-black text-ink tracking-tightest leading-none">4+</div>
-            <div class="text-ink/60 text-sm mt-2 font-semibold">Penggunaan indikator tetap</div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <!-- Main Description -->
+        <div class="md:col-span-8 bg-ink rounded-bento p-10 md:p-14 border border-white/5 reveal relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-y/5 rounded-full blur-[80px] group-hover:bg-y/10 transition-colors duration-700"></div>
+          <div class="inline-flex items-center gap-2 text-y/40 text-[0.6rem] font-bold uppercase tracking-[4px] mb-6 relative z-10">
+            <i data-lucide="cpu" class="w-4 h-4"></i> Core Engine
+          </div>
+          <h2 class="text-3xl md:text-4xl font-black text-white tracking-tightest mb-6 uppercase relative z-10">What is Axiom?</h2>
+          <p class="text-white/60 text-base leading-[1.8] mb-6 relative z-10">Grembit 10 (codename <span class="text-white">Axiom</span>) adalah mesin perdagangan otomatis sepenuhnya yang menargetkan kontrak perpetual Binance Futures. Mesin ini menggabungkan beberapa indikator teknis ke dalam satu model eksekusi yang presisi.</p>
+          <div class="flex flex-wrap gap-4 mt-10 relative z-10">
+            <div class="px-5 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
+              <i data-lucide="trending-up" class="w-5 h-5 text-y"></i>
+              <span class="text-xs font-bold text-white/70">Trend Analysis</span>
+            </div>
+            <div class="px-5 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
+              <i data-lucide="shield-check" class="w-5 h-5 text-y"></i>
+              <span class="text-xs font-bold text-white/70">Risk Mitigation</span>
+            </div>
           </div>
         </div>
-        <!-- Features list -->
-        <div class="md:col-span-12 bg-cream border border-black/5 rounded-bento p-10 reveal">
-          <div class="flex items-center gap-3 mb-6">
-            <h3 class="text-ink font-black text-2xl tracking-tight">Key Features</h3>
-            <div class="flex-1 h-px bg-black/10"></div>
+
+        <!-- Metric Card -->
+        <div class="md:col-span-4 bg-y rounded-bento p-10 flex flex-col justify-between reveal group overflow-hidden relative">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+            <i data-lucide="bar-chart-3" class="w-32 h-32 text-ink"></i>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div
-              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Multi-indicator
-                Confluence</h4>
-              <p class="text-white/50 text-sm leading-relaxed">Validasi dengan penggunaan multi indikator yang
-                diterjemahkan melalui Python.</p>
+          <div class="relative z-10">
+            <span class="text-[0.62rem] font-black text-ink/30 uppercase tracking-[4px] block mb-2">Technical Indicator</span>
+            <div class="text-7xl font-black text-ink tracking-tightest mb-2">4+</div>
+            <p class="text-ink font-bold text-[0.65rem] uppercase tracking-widest opacity-40">Fixed Confluence Layers</p>
+          </div>
+          <div class="relative z-10 mt-12">
+            <h4 class="text-ink font-black text-xl tracking-tighter leading-none mb-3">Algorithmic Axiom</h4>
+            <p class="text-ink/60 text-xs font-bold leading-relaxed">Lapisan manajemen risiko dinamis yang merespon volatilitas pasar secara real-time.</p>
+          </div>
+        </div>
+
+        <!-- Features Bento Grid -->
+        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-5 mt-2">
+          <!-- Feature 1 -->
+          <div class="bg-cream border border-black/5 rounded-bento p-10 reveal group hover:shadow-xl transition-all duration-500">
+            <div class="w-12 h-12 bg-ink rounded-2xl flex items-center justify-center text-y mb-8 group-hover:scale-110 transition-transform">
+              <i data-lucide="layers" class="w-6 h-6"></i>
             </div>
-            <div
-              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Dynamic Risk Sizing
-              </h4>
-              <p class="text-white/50 text-sm leading-relaxed">Secara otomatis mengukur jumlah posisi menyesuaikan
-                dengan tingkat volatilitas dan manajemen resiko.</p>
+            <h3 class="text-ink font-black text-lg tracking-tight mb-3 uppercase">Multi-indicator Confluence</h3>
+            <p class="text-ink/50 text-xs leading-relaxed font-semibold">Validasi dengan penggunaan multi indikator yang diterjemahkan melalui Python API.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-white/5 transition-all duration-500">
+            <div class="text-y mb-8 opacity-40 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="framer" class="w-8 h-8"></i>
             </div>
-            <div
-              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Binance API</h4>
-              <p class="text-white/50 text-sm leading-relaxed">Penggunaan API untuk pengambilan data yang real dan jelas
-                melalui Binance API.</p>
+            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Dynamic Sizing</h4>
+            <p class="text-white/30 text-xs leading-loose font-medium">Secara otomatis mengukur jumlah posisi menyesuaikan tingkat volatilitas.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-white/5 transition-all duration-500">
+            <div class="text-y mb-8 opacity-40 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="anchor" class="w-8 h-8"></i>
             </div>
-            <div
-              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Adaptive Trailing
-                Stop</h4>
-              <p class="text-white/50 text-sm leading-relaxed">Instruksi take profit yang efisien dan pengendalian
-                resiko yang patuh.</p>
-            </div>
+            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Adaptive Stop</h4>
+            <p class="text-white/30 text-xs leading-loose font-medium">Instruksi take profit yang efisien dan pengendalian resiko yang patuh.</p>
           </div>
         </div>
       </div>
@@ -304,6 +321,8 @@
     window.addEventListener('scroll', () => { document.getElementById('nav').style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.4)' : 'none'; }, { passive: true });
     const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    lucide.createIcons();
+  </script>
   </script>
 </body>
 

@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     .reveal {
       opacity: 0;
@@ -129,59 +130,70 @@
         <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">Overview</span>
         <div class="flex-1 h-px bg-black/10"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div class="md:col-span-8 bg-ink rounded-bento p-10 reveal">
-          <h2 class="text-3xl font-black text-white tracking-tighter mb-5">What is VADA?</h2>
-          <p class="text-white/60 text-sm leading-[1.85] mb-4">Grembit VADA (VALIDATION DATA) VADA adalah alat riset
-            berbasis Python yang dirancang untuk menganalisis mikrostruktur pasar mata uang kripto. Tidak seperti
-            indikator tradisional yang hanya bergantung pada harga, VADA menggali data untuk mengungkap keseimbangan
-            kekuatan pasar yang sebenarnya.</p>
-          <p class="text-white/60 text-sm leading-[1.85]">Alat ini menyediakan rincian data, dan ketidakseimbangan pada
-            spot dan futures, memberikan gambaran yang jauh lebih mendalam tentang apa yang terjadi di bawah permukaan.
-          </p>
-        </div>
-        <div class="md:col-span-4 bg-y rounded-bento p-8 flex flex-col justify-between reveal">
-          <div class="text-[0.68rem] font-bold text-ink/40 uppercase tracking-widest">Focus Area</div>
-          <div>
-            <div class="text-5xl mb-3">📊</div>
-            <h4 class="text-ink font-black text-lg leading-tight">Market Microstructure</h4>
-            <p class="text-ink/60 text-xs mt-2 font-semibold">Onchain data, ketidak seimbangan bullish dan bearish, and
-              Volume pasar.</p>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <!-- Main Description -->
+        <div class="md:col-span-8 bg-ink rounded-bento p-10 md:p-14 border border-white/5 reveal relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-y/5 rounded-full blur-[80px] group-hover:bg-y/10 transition-colors duration-700"></div>
+          <div class="inline-flex items-center gap-2 text-y/40 text-[0.6rem] font-bold uppercase tracking-[4px] mb-6 relative z-10">
+            <i data-lucide="database" class="w-4 h-4"></i> Data Engine
+          </div>
+          <h2 class="text-3xl md:text-4xl font-black text-white tracking-tightest mb-6 uppercase relative z-10">What is VADA?</h2>
+          <p class="text-white/60 text-base leading-[1.8] mb-6 relative z-10">Grembit VADA (<span class="text-white">VALIDATION DATA</span>) adalah alat riset berbasis Python yang dirancang untuk menganalisis mikrostruktur pasar. VADA menggali data untuk mengungkap keseimbangan kekuatan pasar melalui Onchain analysis.</p>
+          <div class="flex flex-wrap gap-4 mt-10 relative z-10">
+            <div class="px-5 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
+              <i data-lucide="search" class="w-5 h-5 text-y"></i>
+              <span class="text-xs font-bold text-white/70">Deep Analysis</span>
+            </div>
+            <div class="px-5 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
+              <i data-lucide="bar-chart" class="w-5 h-5 text-y"></i>
+              <span class="text-xs font-bold text-white/70">Market Alpha</span>
+            </div>
           </div>
         </div>
-        <!-- Features list -->
-        <div class="md:col-span-12 bg-cream border border-black/5 rounded-bento p-10 reveal">
-          <div class="flex items-center gap-3 mb-6">
-            <h3 class="text-ink font-black text-2xl tracking-tight">Key Features</h3>
-            <div class="flex-1 h-px bg-black/10"></div>
+
+        <!-- Metric Card -->
+        <div class="md:col-span-4 bg-y rounded-bento p-10 flex flex-col justify-between reveal group overflow-hidden relative">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+            <i data-lucide="binary" class="w-32 h-32 text-ink"></i>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 bg-ink border border-white/5 rounded-2xl hover:bg-white/5 transition-colors group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Aktivitas Pelaku
-                Pasar</h4>
-              <p class="text-white/50 text-sm leading-relaxed">Mendeteksi perubahan harga dengan membandingkan dengan
-                bagaimana aksi dari pelaku pasar.</p>
+          <div class="relative z-10">
+            <span class="text-[0.62rem] font-black text-ink/30 uppercase tracking-[4px] block mb-2">Technical Focus</span>
+            <div class="text-5xl font-black text-ink tracking-tightest mb-2 leading-none uppercase">Micro<br>Structure</div>
+            <p class="text-ink font-bold text-[0.65rem] uppercase tracking-widest opacity-40 mt-4">Volume & Delta Balance</p>
+          </div>
+          <div class="relative z-10 mt-12">
+            <h4 class="text-ink font-black text-xl tracking-tighter leading-none mb-3">Validation Logic</h4>
+            <p class="text-ink/60 text-xs font-bold leading-relaxed">Mendeteksi aktivitas pelaku pasar besar melalui anomali volume dan likuiditas.</p>
+          </div>
+        </div>
+
+        <!-- Features Bento Grid -->
+        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-4 gap-5 mt-2">
+          <!-- Feature 1 -->
+          <div class="md:col-span-2 bg-cream border border-black/5 rounded-bento p-10 reveal group hover:shadow-xl transition-all duration-500">
+            <div class="w-12 h-12 bg-ink rounded-2xl flex items-center justify-center text-y mb-8 group-hover:scale-110 transition-transform">
+              <i data-lucide="eye" class="w-6 h-6"></i>
             </div>
-            <div class="p-6 bg-ink border border-white/5 rounded-2xl hover:bg-white/5 transition-colors group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Membandingkan
-                ketidakseimbangan dalam setup</h4>
-              <p class="text-white/50 text-sm leading-relaxed">Menggali dalam penjualan dan pembelian untuk
-                mengidentifikasi ketidakseimbangan data yang tersembunyi untuk dijadikan setup trading.</p>
+            <h3 class="text-ink font-black text-xl tracking-tight mb-4 uppercase">Market Activity</h3>
+            <p class="text-ink/50 text-sm leading-relaxed font-medium">Mendeteksi perubahan harga dengan membandingkan aksi langsung dari pelaku pasar utama.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="md:col-span-1 bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-white/5 transition-all duration-500">
+            <div class="text-y mb-8 opacity-40 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="flask-conical" class="w-8 h-8"></i>
             </div>
-            <div
-              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Pemetaan harga pasar
-              </h4>
-              <p class="text-white/50 text-sm leading-relaxed">Menvisualisasikan antrian harga yang terjadi pada pasar
-                untuk mendeteksi tujuan dari pelaku pasar.</p>
+            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Deep Setup</h4>
+            <p class="text-white/30 text-xs leading-loose font-medium">Menggali ketidakseimbangan data tersembunyi sebagai dasar trading.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="md:col-span-1 bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-white/5 transition-all duration-500">
+            <div class="text-y mb-8 opacity-40 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="map" class="w-8 h-8"></i>
             </div>
-            <div
-              class="p-6 bg-ink border border-white/5 rounded-2xl hover:-translate-y-1 hover:border-y/40 hover:shadow-xl transition-all duration-300 group">
-              <h4 class="text-white font-bold text-base mb-2 group-hover:text-y transition-colors">Integrasi Binance API
-                dan Bybit API</h4>
-              <p class="text-white/50 text-sm leading-relaxed">Mengambil data dari Binance dan Bybit yang kemudian
-                dilakukan kalkulasi dan pembandingan untuk validasi data yang lebih jelas.</p>
-            </div>
+            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Mapping</h4>
+            <p class="text-white/30 text-xs leading-loose font-medium">Visualisasi antrean harga untuk mendeteksi tujuan bandar.</p>
           </div>
         </div>
       </div>
@@ -297,6 +309,7 @@
     window.addEventListener('scroll', () => { document.getElementById('nav').style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.4)' : 'none'; }, { passive: true });
     const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    lucide.createIcons();
   </script>
 </body>
 
