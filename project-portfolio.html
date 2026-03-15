@@ -132,69 +132,66 @@
         <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">Overview</span>
         <div class="flex-1 h-px bg-black/10"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-        <!-- Main Description -->
-        <div class="md:col-span-8 bg-ink rounded-bento p-10 md:p-14 border border-white/5 reveal relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-y/5 rounded-full blur-[80px] group-hover:bg-y/10 transition-colors duration-700"></div>
-          <h2 class="text-3xl md:text-4xl font-black text-white tracking-tightest mb-6 uppercase relative z-10">The Design Concept</h2>
-          <p class="text-white/60 text-base leading-[1.8] mb-6 relative z-10">Portofolio ini dibangun dengan satu prinsip: <span class="text-white">kesederhanaan yang fungsional</span>. Setiap keputusan desain dibuat dengan teratur, mulai dari aksen kuning yang berani hingga tipografi kontras tinggi yang memastikan keterbacaan maksimal.</p>
-          <div class="flex items-center gap-6 mt-10 relative z-10">
-            <div class="flex flex-col">
-              <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[3px] mb-1">Framework</span>
-              <span class="text-y font-bold text-sm">Tailwind CSS</span>
-            </div>
-            <div class="w-px h-8 bg-white/10"></div>
-            <div class="flex flex-col">
-              <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[3px] mb-1">Architecture</span>
-              <span class="text-y font-bold text-sm">Vanilla Logic</span>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
+        <!-- Text Statement -->
+        <div class="md:col-span-9 bg-ink rounded-[32px] p-12 md:p-16 border border-white/5 reveal group">
+          <span class="text-[0.6rem] font-black text-y uppercase tracking-[0.3em] block mb-8">Philosophy & Execution</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white tracking-tightest leading-[0.95] mb-10 uppercase">
+            A Clean Slate<br>For Every<br><span class="text-white/20">Interaction.</span>
+          </h2>
+          <div class="max-w-xl">
+            <p class="text-white/40 text-lg leading-relaxed mb-8">Portofolio ini dibangun dengan satu prinsip: <span class="text-white">kesederhanaan tanpa kompromi</span>. Setiap pixel diletakkan dengan alasan yang jelas, memastikan performa dan estetika berjalan beriringan tanpa beban tambahan.</p>
+            <div class="flex gap-12 border-t border-white/10 pt-8">
+              <div>
+                <span class="text-[0.55rem] font-black text-white/20 uppercase tracking-widest block mb-2">Developed With</span>
+                <span class="text-white font-bold text-sm">Pure Tailwind & JS</span>
+              </div>
+              <div>
+                <span class="text-[0.55rem] font-black text-white/20 uppercase tracking-widest block mb-2">Visual System</span>
+                <span class="text-white font-bold text-sm">High Contrast Bento</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Metric/Status Card -->
-        <div class="md:col-span-4 bg-y rounded-bento p-10 flex flex-col justify-between reveal group overflow-hidden relative">
-          <div class="absolute -right-4 -top-4 opacity-10 group-hover:rotate-12 transition-transform duration-700">
-            <i data-lucide="layout" class="w-32 h-32 text-ink"></i>
-          </div>
-          <div class="relative z-10">
-            <span class="text-[0.62rem] font-black text-ink/30 uppercase tracking-[4px] block mb-2">Efficiency</span>
-            <div class="text-6xl font-black text-ink tracking-tightest mb-2">99<span class="text-3xl">%</span></div>
-            <p class="text-ink font-bold text-[0.65rem] uppercase tracking-widest opacity-40">Clean Code Score</p>
-          </div>
-          <div class="relative z-10 mt-12">
-            <h4 class="text-ink font-black text-xl tracking-tighter leading-none mb-3">Minimal & Fast</h4>
-            <p class="text-ink/60 text-xs font-bold leading-relaxed">Rendering tanpa jeda dengan performa yang dioptimalkan sejak baris pertama.</p>
+        <!-- Identity Box -->
+        <div class="md:col-span-3 bg-y rounded-[32px] p-10 flex flex-col justify-between reveal overflow-hidden">
+          <div class="h-1 bg-ink/10 w-12 mb-8"></div>
+          <div>
+            <h3 class="text-ink font-black text-3xl tracking-tighter leading-[0.9] uppercase mb-4">Fast<br>As<br>Light.</h3>
+            <p class="text-ink/40 text-[0.65rem] font-black uppercase tracking-widest leading-relaxed">Rendering instant tanpa jeda sejak baris pertama.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Features Bento Grid -->
-        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-4 gap-5 mt-2">
-          <!-- Feature 1 -->
-          <div class="md:col-span-2 bg-cream border border-black/5 rounded-bento p-10 reveal group hover:shadow-xl transition-all duration-500">
-            <div class="w-12 h-12 bg-ink rounded-2xl flex items-center justify-center text-y mb-8 group-hover:scale-110 transition-transform">
-              <i data-lucide="zap" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-ink font-black text-xl tracking-tight mb-4 uppercase">Performance First</h3>
-            <p class="text-ink/50 text-sm leading-relaxed font-medium">Dibangun untuk kecepatan, meminimalisir payload untuk pengalaman pengguna yang instan.</p>
-          </div>
+  <!-- ── FEATURES: INDEPENDENT SECTION ── -->
+  <section class="bg-white py-24">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+        <div class="max-w-md">
+          <span class="text-ink/30 text-[0.6rem] font-black tracking-[0.3em] uppercase block mb-4">Core Components</span>
+          <h2 class="text-ink font-black text-4xl tracking-tightest uppercase leading-none">Key Features</h2>
+        </div>
+        <div class="h-px flex-1 bg-ink/10 hidden md:block mb-4 mx-12"></div>
+        <p class="text-ink/40 text-xs font-bold max-w-[200px] leading-relaxed uppercase">Sistem terintegrasi untuk performa maksimal.</p>
+      </div>
 
-          <!-- Feature 2 -->
-          <div class="md:col-span-1 bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-transparent transition-all duration-500">
-            <div class="text-y mb-6 opacity-40 group-hover:opacity-100 transition-opacity">
-              <i data-lucide="palette" class="w-8 h-8"></i>
-            </div>
-            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Aesthetics</h4>
-            <p class="text-white/30 text-xs leading-loose">Visual kontras tinggi yang profesional.</p>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="md:col-span-2 bg-ink rounded-[24px] p-12 reveal group hover:-translate-y-1 transition-transform duration-500">
+          <h3 class="text-y font-black text-2xl tracking-tighter uppercase mb-4">Performance First</h3>
+          <p class="text-white/30 text-sm leading-relaxed font-medium">Meminimalisir payload untuk pengalaman navigasi yang instan di semua perangkat.</p>
+        </div>
+        
+        <div class="bg-cream border border-black/5 rounded-[24px] p-10 reveal group">
+          <h4 class="text-ink font-black text-xs uppercase tracking-widest mb-4">Visuals</h4>
+          <p class="text-ink/40 text-xs leading-loose font-bold uppercase transition-colors group-hover:text-ink">Skema warna kontras tinggi yang profesional.</p>
+        </div>
 
-          <!-- Feature 3 -->
-          <div class="md:col-span-1 bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-transparent transition-all duration-500">
-            <div class="text-y mb-6 opacity-40 group-hover:opacity-100 transition-opacity">
-              <i data-lucide="grid" class="w-8 h-8"></i>
-            </div>
-            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Bento Grid</h4>
-            <p class="text-white/30 text-xs leading-loose">Struktur hierarki yang modern.</p>
-          </div>
+        <div class="bg-cream border border-black/5 rounded-[24px] p-10 reveal group">
+          <h4 class="text-ink font-black text-xs uppercase tracking-widest mb-4">Grid</h4>
+          <p class="text-ink/40 text-xs leading-loose font-bold uppercase transition-colors group-hover:text-ink">Struktur hierarki modern untuk konten terorganisir.</p>
         </div>
       </div>
     </div>

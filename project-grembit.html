@@ -137,71 +137,66 @@
         <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">Overview</span>
         <div class="flex-1 h-px bg-black/10"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
         <!-- Main Description -->
-        <div class="md:col-span-8 bg-ink rounded-bento p-10 md:p-14 border border-white/5 reveal relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-y/5 rounded-full blur-[80px] group-hover:bg-y/10 transition-colors duration-700"></div>
-          <div class="inline-flex items-center gap-2 text-y/40 text-[0.6rem] font-bold uppercase tracking-[4px] mb-6 relative z-10">
-            <i data-lucide="cpu" class="w-4 h-4"></i> Core Engine
-          </div>
-          <h2 class="text-3xl md:text-4xl font-black text-white tracking-tightest mb-6 uppercase relative z-10">What is Axiom?</h2>
-          <p class="text-white/60 text-base leading-[1.8] mb-6 relative z-10">Grembit 10 (codename <span class="text-white">Axiom</span>) adalah mesin perdagangan otomatis sepenuhnya yang menargetkan kontrak perpetual Binance Futures. Mesin ini menggabungkan beberapa indikator teknis ke dalam satu model eksekusi yang presisi.</p>
-          <div class="flex flex-wrap gap-4 mt-10 relative z-10">
-            <div class="px-5 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
-              <i data-lucide="trending-up" class="w-5 h-5 text-y"></i>
-              <span class="text-xs font-bold text-white/70">Trend Analysis</span>
-            </div>
-            <div class="px-5 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
-              <i data-lucide="shield-check" class="w-5 h-5 text-y"></i>
-              <span class="text-xs font-bold text-white/70">Risk Mitigation</span>
+        <div class="md:col-span-9 bg-ink rounded-[32px] p-12 md:p-16 border border-white/5 reveal relative overflow-hidden group">
+          <span class="text-[0.6rem] font-black text-y uppercase tracking-[0.3em] block mb-8">Algorithmic Axiom</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white tracking-tightest leading-[0.95] mb-10 uppercase">
+            Precision<br>Over<br><span class="text-white/20">Speculation.</span>
+          </h2>
+          <div class="max-w-xl">
+            <p class="text-white/40 text-lg leading-relaxed mb-10">Grembit 10 Axiom adalah mesin perdagangan otomatis yang dibangun di atas fondasi <span class="text-white">probabilitas matematis</span>. Menghilangkan faktor emosional manusia dengan eksekusi berbasis data murni pada Binance Futures.</p>
+            <div class="flex flex-wrap gap-10 border-t border-white/10 pt-8">
+              <div>
+                <span class="text-[0.55rem] font-black text-white/20 uppercase tracking-widest block mb-2">Target Market</span>
+                <span class="text-white font-bold text-sm uppercase">Perpetual Futures</span>
+              </div>
+              <div>
+                <span class="text-[0.55rem] font-black text-white/20 uppercase tracking-widest block mb-2">Logic Type</span>
+                <span class="text-white font-bold text-sm uppercase">Multi-Confluence</span>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Metric Card -->
-        <div class="md:col-span-4 bg-y rounded-bento p-10 flex flex-col justify-between reveal group overflow-hidden relative">
-          <div class="absolute -right-4 -top-4 opacity-10 group-hover:rotate-12 transition-transform duration-700">
-            <i data-lucide="bar-chart-3" class="w-32 h-32 text-ink"></i>
-          </div>
-          <div class="relative z-10">
-            <span class="text-[0.62rem] font-black text-ink/30 uppercase tracking-[4px] block mb-2">Technical Indicator</span>
-            <div class="text-7xl font-black text-ink tracking-tightest mb-2">4+</div>
-            <p class="text-ink font-bold text-[0.65rem] uppercase tracking-widest opacity-40">Fixed Confluence Layers</p>
-          </div>
-          <div class="relative z-10 mt-12">
-            <h4 class="text-ink font-black text-xl tracking-tighter leading-none mb-3">Algorithmic Axiom</h4>
-            <p class="text-ink/60 text-xs font-bold leading-relaxed">Lapisan manajemen risiko dinamis yang merespon volatilitas pasar secara real-time.</p>
+        <div class="md:col-span-3 bg-y rounded-[32px] p-10 flex flex-col justify-between reveal overflow-hidden">
+          <div class="h-1 bg-ink/10 w-12 mb-8"></div>
+          <div>
+            <h3 class="text-ink font-black text-3xl tracking-tighter leading-[0.9] uppercase mb-4">Risk<br>Zero<br>Bias.</h3>
+            <p class="text-ink/40 text-[0.65rem] font-black uppercase tracking-widest leading-relaxed">Sistem manajemen risiko dinamis yang merespon volatilitas real-time.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Features Bento Grid -->
-        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-5 mt-2">
-          <!-- Feature 1 -->
-          <div class="bg-cream border border-black/5 rounded-bento p-10 reveal group hover:shadow-xl transition-all duration-500">
-            <div class="w-12 h-12 bg-ink rounded-2xl flex items-center justify-center text-y mb-8 group-hover:scale-110 transition-transform">
-              <i data-lucide="layers" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-ink font-black text-lg tracking-tight mb-3 uppercase">Multi-indicator Confluence</h3>
-            <p class="text-ink/50 text-xs leading-relaxed font-semibold">Validasi dengan penggunaan multi indikator yang diterjemahkan melalui Python API.</p>
-          </div>
+  <!-- ── FEATURES: INDEPENDENT SECTION ── -->
+  <section class="bg-white py-24">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+        <div class="max-w-md">
+          <span class="text-ink/30 text-[0.6rem] font-black tracking-[0.3em] uppercase block mb-4">Strategic Layers</span>
+          <h2 class="text-ink font-black text-4xl tracking-tightest uppercase leading-none">Core Features</h2>
+        </div>
+        <div class="h-px flex-1 bg-ink/10 hidden md:block mb-4 mx-12"></div>
+        <p class="text-ink/40 text-xs font-bold max-w-[200px] leading-relaxed uppercase">Logika berlapis untuk perlindungan aset.</p>
+      </div>
 
-          <!-- Feature 2 -->
-          <div class="bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-white/5 transition-all duration-500">
-            <div class="text-y mb-8 opacity-40 group-hover:opacity-100 transition-opacity">
-              <i data-lucide="framer" class="w-8 h-8"></i>
-            </div>
-            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Dynamic Sizing</h4>
-            <p class="text-white/30 text-xs leading-loose font-medium">Secara otomatis mengukur jumlah posisi menyesuaikan tingkat volatilitas.</p>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-ink rounded-[24px] p-12 reveal group hover:-translate-y-1 transition-transform duration-500">
+          <h3 class="text-y font-black text-2xl tracking-tighter uppercase mb-4">Mathematical Confluence</h3>
+          <p class="text-white/30 text-sm leading-relaxed font-medium">Validasi berlapis yang memastikan setiap entri didasarkan pada kesepakatan indikator teknis.</p>
+        </div>
 
-          <!-- Feature 3 -->
-          <div class="bg-ink rounded-bento p-10 reveal group hover:border-y/40 border border-white/5 transition-all duration-500">
-            <div class="text-y mb-8 opacity-40 group-hover:opacity-100 transition-opacity">
-              <i data-lucide="anchor" class="w-8 h-8"></i>
-            </div>
-            <h4 class="text-white font-black text-sm uppercase tracking-widest mb-3">Adaptive Stop</h4>
-            <p class="text-white/30 text-xs leading-loose font-medium">Instruksi take profit yang efisien dan pengendalian resiko yang patuh.</p>
-          </div>
+        <div class="bg-cream border border-black/5 rounded-[24px] p-12 reveal group">
+          <h4 class="text-ink font-black text-xs uppercase tracking-widest mb-4">Risk Control</h4>
+          <p class="text-ink/40 text-xs leading-loose font-bold uppercase transition-colors group-hover:text-ink">Dynamic position sizing berdasarkan tingkat volatilitas pasar.</p>
+        </div>
+
+        <div class="bg-cream border border-black/5 rounded-[24px] p-12 reveal group">
+          <h4 class="text-ink font-black text-xs uppercase tracking-widest mb-4">Execution</h4>
+          <p class="text-ink/40 text-xs font-bold uppercase leading-relaxed transition-colors group-hover:text-ink">Konektivitas langsung ke API Binance dengan latensi rendah.</p>
         </div>
       </div>
     </div>
