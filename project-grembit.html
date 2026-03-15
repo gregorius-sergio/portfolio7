@@ -90,9 +90,9 @@
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
         <!-- Main Info Card -->
-        <div class="md:col-span-8 bg-ink-soft border border-white/10 rounded-[32px] p-10 flex flex-col justify-between reveal">
+        <div class="md:col-span-8 bg-ink-soft border border-white/10 rounded-[40px] p-10 md:p-14 flex flex-col justify-between reveal min-h-[400px]">
           <div>
-            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-8">
+            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-10">
               <span class="w-[4px] h-[4px] rounded-full bg-green-400 animate-pulse"></span>Under Developing
             </div>
             <h1 class="text-[clamp(2.5rem,5vw,5rem)] font-black tracking-tightest leading-[0.95] text-white mb-6 uppercase">
@@ -103,23 +103,23 @@
         </div>
 
         <!-- Meta Image Card -->
-        <div class="md:col-span-4 bg-y rounded-[32px] overflow-hidden reveal relative group">
-          <img src="assets/grembit10-cover.png" alt="Axiom 10" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+        <div class="md:col-span-4 bg-y rounded-[40px] overflow-hidden reveal relative group min-h-[400px]">
+          <img src="assets/grembit10-cover.png" alt="Axiom 10" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0">
           <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
         </div>
 
         <!-- Stack Card -->
-        <div class="md:col-span-12 bg-ink-soft border border-white/10 rounded-[32px] p-8 flex flex-col md:flex-row justify-between items-center gap-6 reveal">
+        <div class="md:col-span-12 bg-ink-soft border border-white/10 rounded-[40px] p-8 md:px-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-8 reveal">
           <div class="flex flex-col">
             <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-1">Architecture</span>
             <span class="text-white font-bold text-sm">Full-Stack Algo Engine</span>
           </div>
-          <div class="flex flex-wrap gap-2 justify-center">
-            <span class="text-[0.65rem] font-bold text-white bg-white/5 border border-white/10 px-5 py-2.5 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">Python</span>
-            <span class="text-[0.65rem] font-bold text-white bg-white/5 border border-white/10 px-5 py-2.5 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">Binance API</span>
-            <span class="text-[0.65rem] font-bold text-white bg-white/5 border border-white/10 px-5 py-2.5 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">CCTX</span>
-            <span class="text-[0.65rem] font-bold text-white bg-white/5 border border-white/10 px-5 py-2.5 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">Pandas</span>
-            <span class="text-[0.65rem] font-bold text-white bg-white/5 border border-white/10 px-5 py-2.5 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">NumPy</span>
+          <div class="flex flex-wrap gap-2.5 justify-center">
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">Python</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">Binance API</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">CCTX</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">Pandas</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">NumPy</span>
           </div>
         </div>
       </div>
@@ -174,13 +174,13 @@
       <!-- Varied Bento Grid (Full) -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <!-- Box 01: Large Black -->
-        <div class="md:col-span-7 bg-ink rounded-[32px] p-10 reveal border border-white/5 hover:-translate-y-1 transition-all shadow-md group">
+        <div class="md:col-span-7 bg-ink rounded-[32px] p-8 md:p-10 reveal border border-white/5 hover:-translate-y-1 transition-all shadow-md group">
           <div class="flex justify-between items-start mb-12">
             <h4 class="text-white/20 text-[0.6rem] font-black uppercase tracking-[0.4em]">01 / Logic</h4>
             <div class="w-10 h-10 rounded-full bg-y flex items-center justify-center text-ink font-black text-xs transition-transform group-hover:rotate-12">A</div>
           </div>
-          <h3 class="text-white font-black text-3xl tracking-tighter uppercase mb-6">Confluence Analysis</h3>
-          <p class="text-white/40 text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md mb-4">Validasi berlapis berdasarkan indikator teknis multi-sektor: RSI divergence, Volume Profile, dan Multi-timeframe trend alignment.</p>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Confluence Analysis</h3>
+          <p class="text-white/40 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md mb-4">Validasi berlapis berdasarkan indikator teknis multi-sektor: RSI divergence, Volume Profile, dan Multi-timeframe trend alignment.</p>
           <div class="flex gap-2">
             <span class="text-[0.5rem] bg-white/5 text-white/40 px-3 py-1 rounded-full border border-white/10 uppercase font-black">Probabilistic</span>
             <span class="text-[0.5rem] bg-white/5 text-white/40 px-3 py-1 rounded-full border border-white/10 uppercase font-black">Non-Repaint</span>
@@ -188,28 +188,28 @@
         </div>
 
         <!-- Box 02: Small Yellow -->
-        <div class="md:col-span-5 bg-y rounded-[32px] p-10 reveal hover:-translate-y-1 transition-all shadow-md">
+        <div class="md:col-span-5 bg-y rounded-[32px] p-8 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md">
           <h4 class="text-ink/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-12">02 / Defense</h4>
           <h3 class="text-ink font-black text-2xl tracking-tighter uppercase mb-4">Risk Shield</h3>
-          <p class="text-ink/60 text-[0.7rem] font-bold leading-loose uppercase mb-6">Sistem proteksi modal otomatis melalui dynamic position sizing dan trailing stop yang adaptif terhadap volatilitas pasar.</p>
+          <p class="text-ink/60 text-[0.7rem] font-bold leading-loose uppercase mb-6">Sistem proteksi modal otomatis melalui dynamic position sizing dan trailing stop adaptif.</p>
           <div class="w-full h-1.5 bg-ink/10 rounded-full overflow-hidden">
             <div class="bg-ink h-full animate-pulse" style="width: 75%"></div>
           </div>
         </div>
 
-        <!-- Box 03: Small Zinc (New color instead of plain white) -->
-        <div class="md:col-span-4 bg-[#EDEDED] rounded-[32px] p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm group">
+        <!-- Box 03: Small Zinc -->
+        <div class="md:col-span-4 bg-[#EFEFEF] rounded-[32px] p-8 md:p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm group">
           <h4 class="text-ink/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-10">03 / Speed</h4>
           <h3 class="text-ink font-black text-2xl tracking-tighter uppercase mb-4">Low Latency</h3>
-          <p class="text-ink/50 text-[0.75rem] font-bold leading-relaxed uppercase">Konektivitas WebSocket langsung ke API Binance dengan latensi <span class="text-ink">100ms</span>. Eksekusi dieksekusi pada server redundan AWS.</p>
+          <p class="text-ink/50 text-[0.75rem] font-bold leading-relaxed uppercase">Konektivitas WebSocket langsung ke API Binance dengan latensi rendah <span class="text-ink">100ms</span>.</p>
         </div>
 
         <!-- Box 04: Large Zinc/Light Gray -->
-        <div class="md:col-span-8 bg-[#F3F3F3] rounded-[32px] p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm relative overflow-hidden group">
-          <div class="absolute -bottom-4 -right-4 text-ink/[0.03] text-9xl font-black select-none group-hover:scale-110 transition-transform">PROOF</div>
+        <div class="md:col-span-8 bg-[#E5E5E5] rounded-[32px] p-8 md:p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm relative overflow-hidden group">
+          <div class="absolute -bottom-4 -right-4 text-ink/[0.03] text-7xl md:text-9xl font-black select-none group-hover:scale-110 transition-transform">PROOF</div>
           <h4 class="text-ink/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-10">04 / Performance</h4>
-          <h3 class="text-ink font-black text-3xl tracking-tighter uppercase mb-6">Walk-Forward Backend</h3>
-          <p class="text-ink/50 text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md">Teruji melalui 3 tahun data historis dengan Sharpe ratio <span class="text-ink">2.1</span> dan drawdown maksimum <span class="text-ink font-black">12%</span> pada kondisi pasar ekstrem.</p>
+          <h3 class="text-ink font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Walk-Forward Backend</h3>
+          <p class="text-ink/50 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md">Teruji melalui 3 tahun data historis dengan Sharpe ratio <span class="text-ink">2.1</span> dan low drawdown.</p>
         </div>
       </div>
     </div>

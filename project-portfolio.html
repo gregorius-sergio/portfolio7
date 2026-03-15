@@ -84,34 +84,37 @@
         <a href="index.html#projects" class="hover:text-y transition-colors">Projects</a><span>›</span>
         <span class="text-white/60">Portfolio Website</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-5 h-auto md:h-[600px]">
-        <!-- Hero Image (Vertical Bento) -->
-        <div class="md:col-span-4 md:row-span-2 bg-y rounded-[32px] overflow-hidden reveal relative group">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <!-- Title Card -->
+        <div class="md:col-span-8 bg-ink-soft border border-white/10 rounded-[40px] p-10 md:p-14 flex flex-col justify-between reveal min-h-[400px]">
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-10">
+              <span class="w-[4px] h-[4px] rounded-full bg-green-400 animate-pulse"></span>Active Project
+            </div>
+            <h1 class="text-[clamp(2.5rem,5vw,4.5rem)] font-black tracking-tightest leading-[0.95] text-white mb-8 uppercase">
+              The Digital<br><span class="text-y">Portfolio Showcase</span>
+            </h1>
+          </div>
+          <p class="text-white/40 text-lg leading-relaxed max-w-xl">Website ini adalah manifestasi teknis dari kemampuan saya dalam desain UI/UX dan pemrograman frontend, dibangun dengan fokus pada performa akses tinggi.</p>
+        </div>
+
+        <!-- Hero Image Card -->
+        <div class="md:col-span-4 bg-y rounded-[40px] overflow-hidden reveal relative group min-h-[400px]">
           <img src="assets/about-sub1.png" alt="Portfolio Preview" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
           <div class="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors"></div>
         </div>
 
-        <!-- Title Card -->
-        <div class="md:col-span-8 md:row-span-1 bg-ink-soft border border-white/10 rounded-[32px] p-10 flex flex-col justify-between reveal">
-          <div>
-            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-8">
-              <span class="w-[4px] h-[4px] rounded-full bg-green-400"></span>Active Project
-            </div>
-            <h1 class="text-[clamp(2.2rem,4vw,4rem)] font-black tracking-tightest leading-[0.95] text-white mb-6 uppercase">
-              The Digital<br><span class="text-y">Portfolio Showcase</span>
-            </h1>
+        <!-- Tech Stack Card -->
+        <div class="md:col-span-12 bg-ink-soft border border-white/10 rounded-[40px] p-8 md:px-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-8 reveal">
+          <div class="flex flex-col">
+            <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-1">Built With Precision:</span>
+            <span class="text-white font-bold text-sm">Full-Stack Capability</span>
           </div>
-          <p class="text-white/40 text-base leading-relaxed max-w-xl">Website ini adalah manifestasi teknis dari kemampuan saya dalam desain UI/UX dan pemrograman frontend, dibangun dengan fokus pada performa akses tinggi.</p>
-        </div>
-
-        <!-- Tech stack (Bento) -->
-        <div class="md:col-span-8 md:row-span-1 bg-ink-soft border border-white/10 rounded-[32px] p-8 flex flex-col justify-center reveal">
-          <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-6">Built With Precision:</span>
-          <div class="flex flex-wrap gap-2.5">
-            <span class="text-[0.7rem] font-bold text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-white hover:text-ink transition-all">HTML5</span>
-            <span class="text-[0.7rem] font-bold text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#38BDF8] hover:text-ink transition-all">Tailwind CSS</span>
-            <span class="text-[0.7rem] font-bold text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#F7DF1E] hover:text-ink transition-all">JavaScript</span>
-            <span class="text-[0.7rem] font-bold text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#FF4500] hover:text-ink transition-all">GitHub Pages</span>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-white hover:text-ink transition-all cursor-default">HTML5</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-[#38BDF8] hover:text-ink transition-all cursor-default">Tailwind CSS</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-[#F7DF1E] hover:text-ink transition-all cursor-default">JavaScript</span>
+            <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-[#FF4500] hover:text-ink transition-all cursor-default">GitHub Pages</span>
           </div>
         </div>
       </div>
@@ -124,12 +127,12 @@
       <!-- Top Row: Narrative (Interactive Slide Boxes) -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-20">
         <div class="md:col-span-8 bg-ink rounded-[40px] p-12 md:p-16 reveal overflow-hidden relative shadow-lg group">
-          <div class="absolute -top-10 -right-10 text-[10rem] font-black text-white/[0.03] select-none uppercase leading-none group-hover:scale-110 transition-transform duration-700">Digital</div>
+          <div class="absolute -top-10 -right-10 text-[8rem] md:text-[10rem] font-black text-white/[0.03] select-none uppercase leading-none group-hover:scale-110 transition-transform duration-700">Digital</div>
           <span class="text-[0.65rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-8">The Narrative</span>
-          <h2 class="text-4xl md:text-5xl font-black text-white tracking-tightest leading-[1.1] mb-10 uppercase">
+          <h2 class="text-3xl md:text-5xl font-black text-white tracking-tightest leading-[1.1] mb-10 uppercase">
             A Clean Slate For<br>Every Interaction.
           </h2>
-          <p class="text-white/50 text-base leading-relaxed max-w-xl">Portofolio ini dibangun dengan satu prinsip: <span class="text-white font-bold">kesederhanaan tanpa kompromi</span> melalui implementasi kode murni tanpa framework berlebih.</p>
+          <p class="text-white/50 text-sm md:text-base leading-relaxed max-w-xl">Portofolio ini dibangun dengan satu prinsip: <span class="text-white font-bold">kesederhanaan tanpa kompromi</span> melalui implementasi kode murni tanpa framework berlebih.</p>
           
           <!-- Slide Box on Hover -->
           <div class="absolute inset-x-0 bottom-0 bg-y p-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-center justify-between">
@@ -168,11 +171,11 @@
       <!-- Varied Bento Grid (Full) -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <!-- Box 01: Large Zinc (New color) -->
-        <div class="md:col-span-8 bg-[#F3F3F3] rounded-[32px] p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm relative overflow-hidden group">
-          <div class="absolute -bottom-4 -right-4 text-ink/[0.02] text-9xl font-black select-none">DESIGN</div>
+        <div class="md:col-span-8 bg-[#EFEFEF] rounded-[32px] p-8 md:p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm relative overflow-hidden group">
+          <div class="absolute -bottom-4 -right-4 text-ink/[0.02] text-7xl md:text-9xl font-black select-none">DESIGN</div>
           <h4 class="text-ink/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-10">01 / Style</h4>
-          <h3 class="text-ink font-black text-3xl tracking-tighter uppercase mb-6">Visual Excellence</h3>
-          <p class="text-ink/50 text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md mb-6">Skema warna kontras tinggi yang profesional, tajam, dan dikurasi secara manual untuk kejelasan navigasi.</p>
+          <h3 class="text-ink font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Visual Excellence</h3>
+          <p class="text-ink/50 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md mb-6">Skema warna kontras tinggi yang profesional, tajam, dan dikurasi secara manual untuk kejelasan navigasi.</p>
           <div class="flex gap-2">
             <span class="text-[0.55rem] font-black bg-ink/5 px-3 py-1.5 rounded-full uppercase tracking-tighter">Color Theory</span>
             <span class="text-[0.55rem] font-black bg-ink/5 px-3 py-1.5 rounded-full uppercase tracking-tighter">Glassmorphism</span>
@@ -180,28 +183,28 @@
         </div>
 
         <!-- Box 02: Small Yellow -->
-        <div class="md:col-span-4 bg-y rounded-[32px] p-10 reveal hover:-translate-y-1 transition-all shadow-md">
+        <div class="md:col-span-4 bg-y rounded-[32px] p-8 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md">
           <h4 class="text-ink/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-12">02 / Speed</h4>
           <h3 class="text-ink font-black text-2xl tracking-tighter uppercase mb-4">Performance</h3>
-          <p class="text-ink/60 text-[0.7rem] font-bold leading-loose uppercase mb-6">Meminimalisir payload untuk pengalaman navigasi instan di semua perangkat mobile dan desktop.</p>
+          <p class="text-ink/60 text-[0.7rem] font-bold leading-loose uppercase mb-6">Meminimalisir payload untuk pengalaman navigasi instan di semua perangkat.</p>
           <div class="bg-ink/10 h-1.5 w-full rounded-full"><div class="bg-ink h-full animate-pulse" style="width: 90%"></div></div>
         </div>
 
         <!-- Box 03: Small Black -->
-        <div class="md:col-span-5 bg-ink rounded-[32px] p-10 reveal hover:-translate-y-1 transition-all shadow-md group">
+        <div class="md:col-span-5 bg-ink rounded-[32px] p-8 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md group">
           <h4 class="text-white/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-12">03 / Depth</h4>
           <h3 class="text-white font-black text-2xl tracking-tighter uppercase mb-4">Bento Structure</h3>
-          <p class="text-white/40 text-[0.75rem] font-bold leading-relaxed uppercase mb-6">Struktur hierarki modern menggunakan CSS Grid untuk penyajian konten yang terorganisir, padat, dan intuitif.</p>
+          <p class="text-white/40 text-[0.75rem] font-bold leading-relaxed uppercase mb-6">Struktur hierarki modern menggunakan CSS Grid untuk penyajian konten yang terorganisir.</p>
         </div>
 
         <!-- Box 04: Large Zinc/Light Gray -->
-        <div class="md:col-span-7 bg-[#EDEDED] rounded-[32px] p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-lg group">
+        <div class="md:col-span-7 bg-[#E5E5E5] rounded-[32px] p-8 md:p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-lg group">
           <div class="flex justify-between items-start mb-12">
             <h4 class="text-ink/20 text-[0.6rem] font-black uppercase tracking-[0.4em]">04 / Logic</h4>
             <div class="w-10 h-10 rounded-full bg-y flex items-center justify-center text-ink font-black text-xs group-hover:rotate-6 transition-transform">JS</div>
           </div>
-          <h3 class="text-ink font-black text-3xl tracking-tighter uppercase mb-6">Intuitive Access</h3>
-          <p class="text-ink/50 text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md">Navigasi mulus dengan custom scroll behavior dan state management sederhana menggunakan vanilla JavaScript murni.</p>
+          <h3 class="text-ink font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Intuitive Access</h3>
+          <p class="text-ink/50 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md">Navigasi mulus dengan custom scroll behavior dan state management sederhana.</p>
         </div>
       </div>
     </div>
