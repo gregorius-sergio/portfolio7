@@ -83,41 +83,36 @@
         <a href="index.html#projects" class="hover:text-y transition-colors">Projects</a><span>›</span>
         <span class="text-white/60">Grembit VADA</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 h-auto">
-        <!-- Title Box (Full Width Top) -->
-        <div class="md:col-span-12 bg-ink-soft border border-white/5 rounded-[40px] p-8 md:p-10 reveal">
+      <!-- Polished Hero Grid (7-5 Split) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-stretch">
+        <!-- Main Title Card -->
+        <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-[40px] p-8 md:p-10 flex flex-col justify-center reveal">
           <div class="inline-flex items-center gap-2 text-[0.6rem] font-black uppercase text-y/90 bg-y/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-y/20">
             <span class="w-1.5 h-1.5 rounded-full bg-y animate-pulse"></span>Active Project
           </div>
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-tightest leading-[0.95] text-white mb-6 uppercase">
             Data Mastery With<br><span class="text-y">Grembit VADA</span>
           </h1>
-          <p class="text-white/40 text-sm md:text-base leading-relaxed max-w-2xl">Advanced Validation Data — Tools pribadi untuk membaca, memetakan, dan analisa anomali data on-chain secara presisi.</p>
+          <p class="text-white/40 text-sm leading-relaxed max-w-sm">Advanced Validation Data — Tools pribadi untuk membaca, memetakan, dan analisa anomali data on-chain secara presisi.</p>
         </div>
 
         <!-- Image Box (Precise Scaling) -->
-        <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-[40px] overflow-hidden reveal relative group flex items-center justify-center p-3">
+        <div class="md:col-span-5 bg-ink-soft border border-white/5 rounded-[40px] overflow-hidden reveal relative group flex items-center justify-center p-3">
           <img src="assets/vada-1.png" alt="VADA System" class="w-full h-auto rounded-[32px] shadow-2xl transition-transform duration-1000 group-hover:scale-[1.02]">
           <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
         </div>
+      </div>
 
-        <!-- Tech Stack (Right) -->
-        <div class="md:col-span-5 bg-ink-soft border border-white/5 rounded-[40px] p-8 md:p-12 flex flex-col justify-center reveal">
-          <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-8">Core Infrastructure</span>
-          <div class="flex flex-col gap-5">
-            <div class="flex items-center justify-between py-3 border-b border-white/5">
-              <span class="text-[0.65rem] text-white/40 uppercase font-black tracking-widest">Language</span>
-              <span class="text-xs text-y font-bold uppercase">Python</span>
-            </div>
-            <div class="flex items-center justify-between py-3 border-b border-white/5">
-              <span class="text-[0.65rem] text-white/40 uppercase font-black tracking-widest">Connectivity</span>
-              <span class="text-xs text-white font-extrabold uppercase tracking-tighter">CCTX / REST</span>
-            </div>
-            <div class="flex items-center justify-between py-3">
-              <span class="text-[0.65rem] text-white/40 uppercase font-black tracking-widest">Processing</span>
-              <span class="text-xs text-white font-extrabold uppercase tracking-tighter">PANDAS</span>
-            </div>
-          </div>
+      <!-- Compact Infrastructure Bar -->
+      <div class="mt-10 md:col-span-12 bg-ink-soft border border-white/5 rounded-[40px] p-8 md:px-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-8 reveal">
+        <div class="flex flex-col">
+          <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-1">Core Infrastructure:</span>
+          <span class="text-white/60 font-bold text-xs uppercase tracking-wider">Analysis Engine</span>
+        </div>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default uppercase">Python</span>
+          <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default uppercase">CCTX / REST</span>
+          <span class="text-[0.65rem] font-extrabold text-white bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-y hover:text-ink transition-all cursor-default uppercase">Pandas</span>
         </div>
       </div>
     </div>
