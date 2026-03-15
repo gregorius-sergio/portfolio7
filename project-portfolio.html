@@ -86,22 +86,20 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
         <!-- Title Card -->
-        <div class="md:col-span-8 bg-ink-soft border border-white/10 rounded-[40px] p-10 md:p-14 flex flex-col justify-between reveal min-h-[400px]">
-          <div>
-            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-10">
-              <span class="w-[4px] h-[4px] rounded-full bg-green-400 animate-pulse"></span>Active Project
-            </div>
-            <h1 class="text-[clamp(2.5rem,5vw,4.5rem)] font-black tracking-tightest leading-[0.95] text-white mb-8 uppercase">
-              The Digital<br><span class="text-y">Portfolio Showcase</span>
-            </h1>
+        <div class="md:col-span-7 bg-ink-soft border border-white/10 rounded-[40px] p-10 md:p-14 flex flex-col justify-center reveal">
+          <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-8">
+            <span class="w-[4px] h-[4px] rounded-full bg-green-400 animate-pulse"></span>Active Project
           </div>
-          <p class="text-white/40 text-lg leading-relaxed max-w-xl">Website ini adalah manifestasi teknis dari kemampuan saya dalam desain UI/UX dan pemrograman frontend, dibangun dengan fokus pada performa akses tinggi.</p>
+          <h1 class="text-[clamp(2rem,4vw,3.5rem)] font-black tracking-tightest leading-[1] text-white mb-8 uppercase">
+            The Digital<br><span class="text-y">Portfolio Showcase</span>
+          </h1>
+          <p class="text-white/40 text-base leading-relaxed max-w-xl">Website ini adalah manifestasi teknis dari kemampuan saya dalam desain UI/UX dan pemrograman frontend.</p>
         </div>
 
-        <!-- Hero Image Card -->
-        <div class="md:col-span-4 bg-y rounded-[40px] overflow-hidden reveal relative group min-h-[400px]">
-          <img src="assets/about-sub1.png" alt="Portfolio Preview" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
-          <div class="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors"></div>
+        <!-- Hero Image Card (Fixed scaling) -->
+        <div class="md:col-span-5 bg-y rounded-[40px] overflow-hidden reveal relative group aspect-video md:aspect-auto flex items-center justify-center p-6">
+          <img src="assets/about-sub1.png" alt="Portfolio Preview" class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105">
+          <div class="absolute inset-0 bg-ink/5 group-hover:bg-transparent transition-colors pointer-events-none"></div>
         </div>
 
         <!-- Tech Stack Card -->
