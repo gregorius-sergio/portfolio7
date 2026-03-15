@@ -84,23 +84,25 @@
         <a href="index.html#projects" class="hover:text-y transition-colors">Projects</a><span>›</span>
         <span class="text-white/60">Portfolio Website</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-        <!-- Title Card -->
-        <div class="md:col-span-7 bg-ink-soft border border-white/10 rounded-[40px] p-10 md:p-14 flex flex-col justify-center reveal">
-          <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit mb-8">
-            <span class="w-[4px] h-[4px] rounded-full bg-green-400 animate-pulse"></span>Active Project
+      <!-- Clean Hero Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        <!-- Main Title Card -->
+        <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-[40px] p-10 md:p-12 flex flex-col justify-center reveal">
+          <div class="inline-flex items-center gap-2 text-[0.6rem] font-black uppercase text-y/90 bg-y/10 px-4 py-1.5 rounded-full w-fit mb-8 border border-y/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-y animate-pulse"></span>Active Project
           </div>
-          <h1 class="text-[clamp(2rem,4vw,3.5rem)] font-black tracking-tightest leading-[1] text-white mb-8 uppercase">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tightest leading-[1] text-white mb-6 uppercase">
             The Digital<br><span class="text-y">Portfolio Showcase</span>
           </h1>
-          <p class="text-white/40 text-base leading-relaxed max-w-xl">Website ini adalah manifestasi teknis dari kemampuan saya dalam desain UI/UX dan pemrograman frontend.</p>
+          <p class="text-white/40 text-sm md:text-base leading-relaxed max-w-md">Manifestasi teknis kemampuan desain UI/UX dan pemrograman frontend dengan performa tinggi.</p>
         </div>
 
-        <!-- Hero Image Card (Fixed scaling) -->
-        <div class="md:col-span-5 bg-y rounded-[40px] overflow-hidden reveal relative group aspect-video md:aspect-auto flex items-center justify-center p-6">
-          <img src="assets/about-sub1.png" alt="Portfolio Preview" class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105">
-          <div class="absolute inset-0 bg-ink/5 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+        <!-- Image Card (Polished scaling) -->
+        <div class="md:col-span-5 bg-ink-soft border border-white/5 rounded-[40px] overflow-hidden reveal relative group flex items-center justify-center p-4">
+          <img src="assets/about-sub1.png" alt="Portfolio Preview" class="w-full h-auto rounded-[24px] shadow-2xl transition-transform duration-1000 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
         </div>
+      </div>
 
         <!-- Tech Stack Card -->
         <div class="md:col-span-12 bg-ink-soft border border-white/10 rounded-[40px] p-8 md:px-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-8 reveal">
