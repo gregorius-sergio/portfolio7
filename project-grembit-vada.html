@@ -46,123 +46,132 @@
   </style>
 </head>
 
-<body class="bg-white text-ink font-sans antialiased overflow-x-hidden">
+<body class="bg-ink text-white font-sans antialiased overflow-x-hidden">
 
   <!-- NAV -->
   <nav id="nav"
-    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-white/80 backdrop-blur-xl border-b border-ink/5 transition-all">
-    <a href="index.html" class="flex items-center gap-2.5 font-bold text-sm text-ink tracking-tight">
+    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-ink/80 backdrop-blur-xl border-b border-white/5 transition-all">
+    <a href="index.html" class="flex items-center gap-2.5 font-bold text-sm text-white tracking-tight">
       <img src="assets/profile-hero.png" alt=""
-        class="w-8 h-8 rounded-full object-cover ring-2 ring-ink/10 grayscale">
+        class="w-8 h-8 rounded-full object-cover ring-2 ring-white/10 grayscale">
       Gregorius Sergio
     </a>
     <a href="index.html#projects"
-      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-ink/50 hover:text-ink transition-colors uppercase tracking-widest">←
+      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">←
       All Projects</a>
     <button id="hbg" onclick="toggleNav()"
       class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer">
-      <span class="hb block w-5 h-[2px] bg-ink rounded transition-all duration-300"></span>
-      <span class="hb block w-5 h-[2px] bg-ink rounded transition-all duration-300"></span>
-      <span class="hb block w-5 h-[2px] bg-ink rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
     </button>
   </nav>
-  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-white border-b border-ink/10 flex-col px-6 py-5 gap-1">
+  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-ink border-b border-white/10 flex-col px-6 py-5 gap-1">
     <a href="index.html#about" onclick="closeNav()"
-      class="py-3 border-b border-ink/5 text-sm text-ink/70 hover:text-ink transition-colors">About</a>
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-y transition-colors">About</a>
     <a href="index.html#projects" onclick="closeNav()"
-      class="py-3 border-b border-ink/5 text-sm text-ink/70 hover:text-ink transition-colors">← Projects</a>
-    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-ink hover:text-y transition-colors">Contact →</a>
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-y transition-colors">← Projects</a>
+    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-y">Contact →</a>
   </div>
 
-  <!-- ── HERO: LIGHT VIBRANT ── -->
-  <section class="bg-white pt-16 pb-0">
+  <!-- ── HERO: BLACK ── -->
+  <section class="bg-ink pt-16 pb-0">
     <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-16">
       <div
-        class="flex items-center gap-2 text-[0.68rem] text-ink/30 font-bold uppercase tracking-widest mb-10 reveal">
-        <a href="index.html" class="hover:text-ink transition-colors">Home</a><span>›</span>
-        <a href="index.html#projects" class="hover:text-ink transition-colors">Projects</a><span>›</span>
-        <span class="text-ink/60">Grembit VADA</span>
+        class="flex items-center gap-2 text-[0.68rem] text-white/30 font-bold uppercase tracking-widest mb-10 reveal">
+        <a href="index.html" class="hover:text-y transition-colors">Home</a><span>›</span>
+        <a href="index.html#projects" class="hover:text-y transition-colors">Projects</a><span>›</span>
+        <span class="text-white/60">Grembit VADA</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
         <!-- Title card -->
         <div
-          class="md:col-span-12 bg-[#FBFBFB] border border-ink/5 rounded-[48px] p-12 md:p-20 flex flex-col justify-between reveal overflow-hidden relative shadow-sm">
-          <div class="absolute -bottom-10 -right-10 text-[15rem] font-black text-ink/[0.02] select-none uppercase leading-none">VADA</div>
+          class="md:col-span-7 bg-ink-soft border border-white/10 rounded-bento p-10 flex flex-col justify-between min-h-[300px] reveal">
           <div
-            class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-purple-600 bg-purple-600/5 px-4 py-2 rounded-full w-fit mb-12">
-            <span class="w-[4px] h-[4px] rounded-full bg-purple-600 animate-pulse"></span>Active Research
+            class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 bg-green-400/10 px-3 py-1 rounded-full w-fit">
+            <span class="w-[4px] h-[4px] rounded-full bg-green-400"></span>Active Project
           </div>
           <div>
-            <h1 class="text-6xl md:text-[8rem] font-black tracking-tightest leading-[0.8] text-ink mb-10 uppercase">
-              Delta<br><span class="opacity-20">Analysis</span>
+            <h1 class="text-[clamp(2.5rem,4.5vw,4rem)] font-black tracking-tightest leading-[1.05] text-white mb-4">
+              Grembit<br><span class="text-y">VADA</span>
             </h1>
-            <p class="text-ink/40 text-2xl leading-relaxed max-w-3xl">Advanced Validation Data, Tools pribadi untuk membaca dan menganalisa data onchain kian presisi.</p>
+            <p class="text-white/50 text-sm leading-relaxed max-w-md">Advanced Validation Data, Tools pribadi untuk
+              membaca dan menganalisa data onchain.</p>
           </div>
         </div>
-      </div>
-
-      <div class="mt-8 flex flex-wrap items-center gap-4 reveal">
-        <span class="text-[0.6rem] font-black text-ink/20 uppercase tracking-[0.3em] mr-4">Stack:</span>
-        <div class="flex flex-wrap gap-2">
-          <span class="text-[0.65rem] font-bold text-ink bg-white border border-ink/5 px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all">Python</span>
-          <span class="text-[0.65rem] font-bold text-ink bg-white border border-ink/5 px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all">Binance API</span>
-          <span class="text-[0.65rem] font-bold text-ink bg-white border border-ink/5 px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all">CCTX</span>
-          <span class="text-[0.65rem] font-bold text-ink bg-white border border-ink/5 px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all">Pandas</span>
+        <!-- Hero image -->
+        <div class="md:col-span-5 bg-y rounded-bento overflow-hidden min-h-[300px] img-zoom reveal relative">
+          <img src="assets/vada-1.png" alt="VADA" class="w-full h-full object-cover absolute inset-0">
+        </div>
+        <!-- Tech stack -->
+        <div
+          class="md:col-span-12 bg-ink-soft border border-white/10 rounded-bento p-6 flex flex-wrap gap-2 items-center reveal">
+          <span class="text-[0.65rem] font-bold text-white/40 uppercase tracking-widest mr-3">Stack:</span>
+          <span
+            class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Python</span>
+          <span class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Binance
+            API</span>
+          <span
+            class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">CCTX</span>
+          <span
+            class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Pandas</span>
+          <span class="text-sm font-bold text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full">Bybit
+            API</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── UNIFIED COLORED BENTO ── -->
-  <section class="bg-white py-24">
+  <!-- ── UNIFIED PROJECT NARRATIVE ── -->
+  <section class="bg-ink py-24">
     <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
-      <!-- Top Row: Narrative & Features -->
+      <!-- Top Row: Narrative & Mission -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
-        <div class="md:col-span-8 bg-[#FBFBFB] rounded-[48px] p-12 md:p-20 reveal overflow-hidden relative border border-ink/5">
-          <div class="absolute -top-10 -right-10 text-[10rem] font-black text-ink/[0.03] select-none uppercase leading-none">VADA</div>
-          <span class="text-[0.7rem] font-black text-ink/20 uppercase tracking-[0.5em] block mb-10">Microstructure</span>
-          <h2 class="text-5xl md:text-8xl font-black text-ink tracking-tightest leading-[0.85] mb-12 uppercase">
+        <div class="md:col-span-8 bg-[#0F0F0F] rounded-[48px] p-12 md:p-20 reveal overflow-hidden relative">
+          <div class="absolute -top-10 -right-10 text-[10rem] font-black text-white/[0.02] select-none uppercase leading-none">VADA</div>
+          <span class="text-[0.7rem] font-black text-white/20 uppercase tracking-[0.5em] block mb-10">Microstructure</span>
+          <h2 class="text-5xl md:text-8xl font-black text-white tracking-tightest leading-[0.85] mb-12 uppercase">
             Beyond<br>The<br>Surface.
           </h2>
-          <p class="text-ink/40 text-xl leading-relaxed max-w-2xl">Grembit <span class="text-ink font-bold">VADA</span> adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar. Melalui analisis delta dan volume, VADA memetakan ketidakseimbangan yang tersembunyi.</p>
+          <p class="text-white/40 text-xl leading-relaxed max-w-2xl">Grembit <span class="text-white font-bold">VADA</span> adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar. Melalui analisis delta dan volume, VADA memetakan ketidakseimbangan yang tersembunyi.</p>
         </div>
 
         <div class="md:col-span-4 grid grid-cols-1 gap-10">
-          <div class="bg-y rounded-[48px] p-12 flex flex-col justify-between reveal shadow-sm transition-transform hover:-translate-y-1">
+          <div class="bg-y rounded-[48px] p-12 flex flex-col justify-between reveal">
             <h3 class="text-ink font-black text-4xl tracking-tightest leading-none uppercase">Deep<br>Market<br>Alpha.</h3>
             <p class="text-ink/60 text-xs font-bold uppercase tracking-widest leading-relaxed mt-12">Mendeteksi jejak institusi melalui anomali likuiditas.</p>
           </div>
-          <div class="bg-[#1C1C1C] rounded-[48px] p-12 reveal shadow-sm transition-transform hover:-translate-y-1">
+          <div class="bg-[#1C1C1C] rounded-[48px] p-12 reveal">
             <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] block mb-4">Focus</span>
             <div class="text-white text-2xl font-black uppercase tracking-tightest leading-none">Orderbook Delta</div>
           </div>
         </div>
       </div>
 
-      <!-- Feature Grid: Varied & Colorful -->
+      <!-- Feature Grid: Integrated -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div class="bg-[#F3E5F5] rounded-[32px] p-10 reveal border border-purple-200/50 hover:shadow-xl transition-all group">
-          <h4 class="text-purple-700/30 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">01 / Depth</h4>
-          <h3 class="text-purple-900 font-black text-2xl tracking-tighter uppercase mb-4">Microstructure</h3>
-          <p class="text-purple-800/40 text-[0.7rem] font-bold leading-loose uppercase">Visualisasi kedalaman pasar untuk mendeteksi penumpukan pesanan.</p>
+        <div class="bg-[#0F0F0F] rounded-[32px] p-10 reveal border border-white/[0.03] hover:bg-[#151515] transition-colors">
+          <h4 class="text-white/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">01 / Depth</h4>
+          <h3 class="text-white font-black text-2xl tracking-tighter uppercase mb-4">Microstructure</h3>
+          <p class="text-white/30 text-xs font-bold leading-loose uppercase">Visualisasi kedalaman pasar untuk mendeteksi penumpukan pesanan.</p>
         </div>
 
-        <div class="bg-[#E8EAF6] rounded-[32px] p-10 reveal border border-indigo-200/50 hover:shadow-xl transition-all group">
-          <h4 class="text-indigo-700/30 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">02 / Flow</h4>
-          <h3 class="text-indigo-900 font-black text-2xl tracking-tighter uppercase mb-4">Delta Balance</h3>
-          <p class="text-indigo-800/40 text-[0.7rem] font-bold leading-loose uppercase">Mengidentifikasi ketidakseimbangan beli dan jual secara real-time.</p>
+        <div class="bg-[#151515] rounded-[32px] p-10 reveal hover:bg-[#1C1C1C] transition-colors">
+          <h4 class="text-white/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">02 / Flow</h4>
+          <h3 class="text-white font-black text-2xl tracking-tighter uppercase mb-4">Delta Balance</h3>
+          <p class="text-white/30 text-xs font-bold leading-loose uppercase">Mengidentifikasi ketidakseimbangan beli dan jual secara real-time.</p>
         </div>
 
-        <div class="bg-[#E0F2F1] rounded-[32px] p-10 reveal border border-teal-200/50 hover:shadow-xl transition-all group">
-          <h4 class="text-teal-700/30 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">03 / Signal</h4>
-          <h3 class="text-teal-900 font-black text-2xl tracking-tighter uppercase mb-4">Anomalies</h3>
-          <p class="text-teal-800/40 text-[0.7rem] font-bold leading-loose uppercase">Mendeteksi lonjakan volume yang tidak wajar pada harga kunci.</p>
+        <div class="bg-[#0F0F0F] rounded-[32px] p-10 reveal border border-white/[0.03] hover:bg-[#151515] transition-colors">
+          <h4 class="text-white/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">03 / Signal</h4>
+          <h3 class="text-white font-black text-2xl tracking-tighter uppercase mb-4">Anomalies</h3>
+          <p class="text-white/30 text-xs font-bold leading-loose uppercase">Mendeteksi lonjakan volume yang tidak wajar pada harga kunci.</p>
         </div>
 
-        <div class="bg-[#FCE4EC] rounded-[32px] p-10 reveal border border-rose-200/50 hover:shadow-xl transition-all group">
-          <h4 class="text-rose-700/30 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">04 / Proof</h4>
-          <h3 class="text-rose-900 font-black text-2xl tracking-tighter uppercase mb-4">Validations</h3>
-          <p class="text-rose-800/40 text-[0.7rem] font-bold leading-loose uppercase">Kalkulasi anomali volume untuk memvalidasi setup trading.</p>
+        <div class="bg-[#151515] rounded-[32px] p-10 reveal hover:bg-[#1C1C1C] transition-colors">
+          <h4 class="text-white/20 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-8">04 / Proof</h4>
+          <h3 class="text-white font-black text-2xl tracking-tighter uppercase mb-4">Validations</h3>
+          <p class="text-white/30 text-xs font-bold leading-loose uppercase">Kalkulasi anomali volume untuk memvalidasi setup trading.</p>
         </div>
       </div>
     </div>
@@ -192,72 +201,87 @@
     </div>
   </section>
 
-  <!-- ── CONTACT STRIP: LIGHT ── -->
-  <section class="bg-white py-16">
+  <!-- ── CONTACT STRIP: BLACK ── -->
+  <section class="bg-ink py-16">
     <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
       <div
-        class="bg-[#FBFBFB] border border-ink/5 rounded-bento p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 reveal shadow-sm">
+        class="bg-white rounded-bento p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
         <div>
-          <div class="text-[0.68rem] font-bold text-ink/70 uppercase tracking-widest mb-2">Interested?</div>
+          <div class="text-[0.68rem] font-bold text-ink/70 uppercase tracking-widest mb-2">Tertarik?</div>
           <h2 class="text-3xl font-black text-ink tracking-tighter">Silahkan berkenalan dengan saya.</h2>
-          <p class="text-ink/60 text-sm mt-1">Tertarik untuk membangun relasi atau berkolaborasi? Hubungi saya melalui media sosial.</p>
+          <p class="text-ink/60 text-sm mt-1">Tertarik untuk membangun relasi atau berkolaborasi? Hubungi saya melalui
+            media sosial.</p>
         </div>
         <div class="flex flex-wrap gap-3 flex-shrink-0">
           <a href="index.html#contact"
-            class="bg-y text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-y-dark transition-all hover:-translate-y-0.5 shadow-sm">See Social Links →</a>
+            class="bg-y text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-y-dark transition-all hover:-translate-y-0.5 shadow-sm">See
+            Social Links →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER: LIGHT -->
-  <footer class="bg-white border-t border-ink/5">
+  <!-- FOOTER -->
+  <footer class="bg-ink border-t border-white/5">
     <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-14 grid grid-cols-1 md:grid-cols-4 gap-12">
       <div class="md:col-span-2">
-        <a href="index.html" class="flex items-center gap-2.5 mb-6">
-          <img src="assets/profile-hero.png" alt="" class="w-9 h-9 rounded-full object-cover grayscale">
-          <span class="font-black text-ink text-base tracking-tight">Gregorius Sergio</span>
+        <a href="index.html" class="flex items-center gap-2.5 mb-4">
+          <img src="assets/profile-hero.png" alt=""
+            class="w-9 h-9 rounded-full object-cover ring-2 ring-white/10 grayscale">
+          <span class="font-black text-white text-base tracking-tight">Gregorius Sergio</span>
         </a>
-        <p class="text-ink/40 text-xs max-w-xs leading-relaxed mb-8 uppercase font-bold tracking-widest">Digital product designer & developer crafting high-performance solutions and minimalist digital experiences.</p>
-        <div class="flex gap-4">
-          <a href="https://github.com/gregorius-sergio" target="_blank" class="text-ink/30 hover:text-ink transition-colors font-bold text-xs uppercase tracking-widest">Github</a>
-          <a href="#" class="text-ink/30 hover:text-ink transition-colors font-bold text-xs uppercase tracking-widest">LinkedIn</a>
-          <a href="#" class="text-ink/30 hover:text-ink transition-colors font-bold text-xs uppercase tracking-widest">Instagram</a>
+        <p class="text-white/40 text-sm leading-relaxed max-w-xs">Focused on Self developing, Crypto Trading, and
+          learning new things. Based in
+          Pontianak, Indonesia.</p>
+        <div class="flex gap-3 mt-6">
+          <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">GH</a>
+          <a href="https://www.linkedin.com/in/gregorius-sergio-37762b300/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">LI</a>
+          <a href="https://www.instagram.com/gregorius_gesergio/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">IG</a>
+          <a href="https://www.tiktok.com/@gregoryp1.1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">TK</a>
         </div>
       </div>
       <div>
-        <h5 class="text-[0.68rem] font-bold text-ink/20 uppercase tracking-widest mb-6">Navigation</h5>
-        <ul class="space-y-4">
-          <li><a href="index.html#about" class="text-xs font-bold uppercase tracking-widest text-ink/50 hover:text-ink transition-colors">About</a></li>
-          <li><a href="index.html#projects" class="text-xs font-bold uppercase tracking-widest text-ink/50 hover:text-ink transition-colors">Projects</a></li>
-          <li><a href="index.html#contact" class="text-xs font-bold uppercase tracking-widest text-ink">Contact</a></li>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Navigation</h5>
+        <ul class="space-y-3">
+          <li><a href="index.html#about" class="text-sm text-white/50 hover:text-white transition-colors">About</a></li>
+          <li><a href="index.html#skills" class="text-sm text-white/50 hover:text-white transition-colors">Skills</a>
+          </li>
+          <li><a href="index.html#projects"
+              class="text-sm text-white/50 hover:text-white transition-colors">Projects</a></li>
+          <li><a href="index.html#education"
+              class="text-sm text-white/50 hover:text-white transition-colors">Education</a></li>
+          <li><a href="index.html#contact" class="text-sm text-white/50 hover:text-white transition-colors">Contact</a>
+          </li>
         </ul>
       </div>
-       <div>
-        <h5 class="text-[0.68rem] font-bold text-ink/20 uppercase tracking-widest mb-6">Projects</h5>
-        <ul class="space-y-4">
-          <li><a href="project-grembit.html" class="text-xs font-bold uppercase tracking-widest text-ink/50 hover:text-ink transition-colors">Grembit 10 Axiom</a></li>
-          <li><a href="project-grembit-vada.html" class="text-xs font-bold uppercase tracking-widest text-y-dark">Grembit VADA</a></li>
-          <li><a href="project-portfolio.html" class="text-xs font-bold uppercase tracking-widest text-ink/50 hover:text-ink transition-colors">Portfolio Site</a></li>
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Projects</h5>
+        <ul class="space-y-3">
+          <li><a href="project-grembit.html" class="text-sm text-white/50 hover:text-white transition-colors">Grembit 10
+              Axiom</a></li>
+          <li><a href="project-grembit-vada.html" class="text-sm text-y font-semibold">Grembit VADA</a></li>
+          <li><a href="project-portfolio.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Portfolio Website</a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-ink/5">
-      <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <span class="text-[0.6rem] font-bold text-ink/20 uppercase tracking-widest">© 2026 Gregorius Sergio. Built with Precision.</span>
-        <span class="text-[0.6rem] font-bold text-ink/20 uppercase tracking-widest">pontianak, ID</span>
+    <div class="border-t border-white/5">
+      <div
+        class="w-full max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <span class="text-xs text-white/25">© 2025 Gregorius Sergio. All rights reserved.</span>
+        <span class="text-xs text-white/25">Built with <span class="text-y">Tailwind CSS and Vibe coded</span> ·
+          Deployed on GitHub Pages</span>
       </div>
     </div>
   </footer>
 
   <script>
     const hbg = document.getElementById('hbg'), mnav = document.getElementById('mnav'), hbs = document.querySelectorAll('.hb');
-    function toggleNav() {
-      const o = hbg.classList.toggle('open');
-      mnav.style.display = o ? 'flex' : 'none';
-      hbs[0].style.transform = o ? 'translateY(7px) rotate(45deg)' : '';
-      hbs[1].style.opacity = o ? '0' : ''; hbs[2].style.transform = o ? 'translateY(-7px) rotate(-45deg)' : '';
-    }
+    function toggleNav() { const o = hbg.classList.toggle('open'); mnav.style.display = o ? 'flex' : 'none'; hbs[0].style.transform = o ? 'translateY(7px) rotate(45deg)' : ''; hbs[1].style.opacity = o ? '0' : ''; hbs[2].style.transform = o ? 'translateY(-7px) rotate(-45deg)' : ''; }
     function closeNav() { hbg.classList.remove('open'); mnav.style.display = 'none'; hbs.forEach(b => { b.style.transform = ''; b.style.opacity = ''; }); }
     window.addEventListener('scroll', () => { document.getElementById('nav').style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.4)' : 'none'; }, { passive: true });
     const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: 0.08 });
