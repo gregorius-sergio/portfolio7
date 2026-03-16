@@ -5,7 +5,9 @@ Portfolio pribadi saya, dengan desain yang simple dengan konsep layout bento gri
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
 
 **\#1 Landing Page (Hero Section)**
+
 **\#2 Landing Page (Get In Touch Section)** 
+
 **\#3 Project Page (Hero Section – Portfolio Website)**  
 
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
