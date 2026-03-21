@@ -88,6 +88,24 @@
       .group .-translate-x-full { transform: translateX(0); position: relative; }
     }
 
+  
+    /* Lenis Smooth Scroll Setup */
+    html.lenis {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+
   </style>
 </head>
 
@@ -134,14 +152,14 @@
       <!-- Polished Hero Grid (7-5 Split) -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 items-stretch">
         <!-- Main Title Card -->
-        <div class="md:col-span-12 lg:col-span-7 glass-2-0 liquid-glass-glow rounded-bento p-6 md:p-10 flex flex-col justify-center reveal">
-          <div class="inline-flex items-center gap-2 text-[0.62rem] font-black uppercase text-[#E2FF00] bg-[#E2FF00]/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-[#E2FF00]/20 relative z-10">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#E2FF00] animate-pulse"></span>Active Project
+        <div class="md:col-span-12 lg:col-span-7 bg-[#E2FF00] rounded-bento p-6 md:p-10 flex flex-col justify-center reveal shadow-[0_20px_50px_rgba(226,255,0,0.15)]">
+          <div class="inline-flex items-center gap-2 text-[0.62rem] font-black uppercase text-black bg-black/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-black/20 relative z-10">
+            <span class="w-1.5 h-1.5 rounded-full bg-black animate-pulse"></span>Active Project
           </div>
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-tightest leading-[0.95] text-white mb-6 uppercase">
-            Data Mastery<br><span class="text-[#E2FF00]">Grembit VADA</span>
+            Data Mastery<br><span class="text-black/80 font-black">Grembit VADA</span>
           </h1>
-          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-lg relative z-10 font-medium">Advanced Validation Data. Tools pribadi untuk membaca, memetakan, dan analisa anomali data on-chain secara presisi.</p>
+          <p class="text-[#0A0A0A]/70 text-sm md:text-base leading-relaxed max-w-lg relative z-10 font-bold">Advanced Validation Data. Tools pribadi untuk membaca, memetakan, dan analisa anomali data on-chain secara presisi.</p>
         </div>
 
         <!-- Image Box (Precise Scaling) -->
@@ -172,16 +190,16 @@
     <div class="w-full max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
       
       <!-- Left: Sticky Title (1/3) -->
-      <div class="lg:col-span-4 hidden lg:block">
-        <div class="sticky top-32 reveal">
+            <div class="lg:col-span-4 hidden lg:block">
+        <div class="sticky top-32 reveal bg-[#E2FF00] p-8 md:p-10 rounded-bento shadow-[0_20px_50px_rgba(226,255,0,0.15)]">
           <div class="flex items-center gap-3 mb-6">
-            <span class="w-8 h-px bg-[#E2FF00]/30"></span>
-            <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]">Deep Dive</span>
+            <span class="w-8 h-px bg-[#0A0A0A]/30"></span>
+            <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#0A0A0A]/60">Deep Dive</span>
           </div>
-          <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tightest mb-6 relative z-10">
+          <h2 class="text-3xl lg:text-4xl font-black text-[#0A0A0A] leading-tight tracking-tightest mb-6 relative z-10">
             Research and<br>Surface Analysis.
           </h2>
-          <p class="text-white/40 text-sm md:text-base leading-relaxed mb-10 relative z-10 font-medium">Grembit VADA adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar melalui analisis delta mendalam. Memetakan jejak harga yang dapat dijadikan peluang.</p>
+          <p class="text-[#0A0A0A]/70 text-sm leading-relaxed mb-0 relative z-10 font-bold">Grembit VADA adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar melalui analisis delta mendalam. Memetakan jejak harga yang dapat dijadikan peluang.</p>
         </div>
       </div>
 
@@ -191,7 +209,7 @@
         <!-- Deep Dive Mobile Title -->
         <div class="lg:hidden reveal mb-2">
           <div class="flex items-center gap-3 mb-4">
-            <span class="w-8 h-px bg-[#E2FF00]/30"></span>
+            <span class="w-8 h-px bg-[#E2FF00]"></span>
             <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]">Deep Dive</span>
           </div>
           <h2 class="text-3xl font-black text-white leading-tight tracking-tightest mb-4">Research and Surface Analysis.</h2>
@@ -199,10 +217,10 @@
         </div>
 
         <!-- Box 01: Delta --->
-        <div class="bg-[#E2FF00] rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(226,255,0,0.2)] group relative overflow-hidden mb-16 md:mb-24 max-w-[850px] transition-all duration-500 hover:shadow-none">
-          <span class="text-[0.6rem] font-black text-[#0A0A0A]/40 uppercase tracking-[0.4em] block mb-5">Module 1</span>
-          <h3 class="text-[#0A0A0A] font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-black transition-colors relative z-10">Delta Analysis</h3>
-          <p class="text-[#0A0A0A]/70 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10 font-bold">Identifikasi ketidakseimbangan beli dan jual secara <span class="text-black font-extrabold underline decoration-black/20 decoration-2 underline-offset-4">real-time</span> menggunakan On-Chain Data dan Delta Inspection.</p>
+        <div class="glass-2-0 liquid-glass-glow rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5 group relative overflow-hidden mb-16 md:mb-24 max-w-[850px]">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Module 1</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-[#E2FF00] transition-colors relative z-10">Delta Analysis</h3>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">Identifikasi ketidakseimbangan beli dan jual secara <span class="text-black font-extrabold underline decoration-black/20 decoration-2 underline-offset-4">real-time</span> menggunakan On-Chain Data dan Delta Inspection.</p>
           <div class="w-full h-[200px] md:h-[280px] rounded-[16px] overflow-hidden mt-6 border border-white/5 relative z-10">
             <img src="assets/vada-2.png" alt="VADA Module" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
             <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A0A0A]/60 to-transparent pointer-events-none"></div>
@@ -210,29 +228,29 @@
         </div>
 
         <!-- Box 02: Microstructure --->
-        <div class="bg-[#E2FF00] rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(226,255,0,0.2)] group relative overflow-hidden mb-16 md:mb-24 max-w-[850px] transition-all duration-500 hover:shadow-none">
-          <span class="text-[0.6rem] font-black text-[#0A0A0A]/40 uppercase tracking-[0.4em] block mb-5">Module 2</span>
-          <h3 class="text-[#0A0A0A] font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-black transition-colors relative z-10">Microstructure</h3>
-          <p class="text-[#0A0A0A]/70 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10 font-bold">Visualisasi kedalaman pasar untuk mendeteksi penumpukan tersembunyi yang dilakukan oleh para Market Makers maupun entitas besar.</p>
+        <div class="glass-2-0 liquid-glass-glow rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5 group relative overflow-hidden mb-16 md:mb-24 max-w-[850px]">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Module 2</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-[#E2FF00] transition-colors relative z-10">Microstructure</h3>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">Visualisasi kedalaman pasar untuk mendeteksi penumpukan tersembunyi yang dilakukan oleh para Market Makers maupun entitas besar.</p>
           
           <div class="flex flex-col gap-4 mt-6 relative z-10">
-            <div class="bg-[#0A0A0A]/5 border border-[#0A0A0A]/10 rounded-[16px] p-5 hover:bg-[#0A0A0A]/10 transition-colors">
-              <h4 class="text-black font-black text-sm mb-2 uppercase tracking-tight">Anomalies:</h4>
-              <p class="text-[#0A0A0A]/60 text-xs md:text-sm leading-relaxed font-bold">Mendeteksi pergerakan yang tidak wajar pada data yang dihasilkan sebagai penanda terjadinya momentum atau manipulasi.</p>
+            <div class="bg-white/[0.02] border border-white/5 rounded-[16px] p-5 hover:bg-white/5 transition-colors">
+              <h4 class="text-[#E2FF00] font-bold text-sm mb-2">Anomalies:</h4>
+              <p class="text-white/50 text-xs md:text-sm leading-relaxed">Mendeteksi pergerakan yang tidak wajar pada data yang dihasilkan sebagai penanda terjadinya momentum atau manipulasi.</p>
             </div>
-            <div class="bg-[#0A0A0A]/5 border border-[#0A0A0A]/10 rounded-[16px] p-5 hover:bg-[#0A0A0A]/10 transition-colors">
-              <h4 class="text-black font-black text-sm mb-2 uppercase tracking-tight">Validation:</h4>
-              <p class="text-[#0A0A0A]/60 text-xs md:text-sm leading-relaxed font-bold">Kalkulasi dari indikator harga secara otomatis untuk memvalidasi setup dengan presisi probabilitas ekstrem.</p>
+            <div class="bg-white/[0.02] border border-white/5 rounded-[16px] p-5 hover:bg-white/5 transition-colors">
+              <h4 class="text-[#E2FF00] font-bold text-sm mb-2">Validation:</h4>
+              <p class="text-white/50 text-xs md:text-sm leading-relaxed">Kalkulasi dari indikator harga secara otomatis untuk memvalidasi setup dengan presisi probabilitas ekstrem.</p>
             </div>
           </div>
         </div>
 
         <!-- Box 03: Proof & Detail --->
-        <div class="bg-[#E2FF00] rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(226,255,0,0.2)] group relative overflow-hidden mb-16 md:mb-24 max-w-[850px] transition-all duration-500 hover:shadow-none">
-          <span class="text-[0.6rem] font-black text-[#0A0A0A]/40 uppercase tracking-[0.4em] block mb-5">Insight Proof</span>
-          <h3 class="text-[#0A0A0A] font-black text-2xl md:text-3xl tracking-tighter mb-8 group-hover:text-black transition-colors relative z-10">Data Visualization</h3>
+        <div class="glass-2-0 liquid-glass-glow rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5 group relative overflow-hidden mb-16 md:mb-24 max-w-[850px]">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Insight Proof</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-8 group-hover:text-[#E2FF00] transition-colors relative z-10">Data Visualization</h3>
           
-          <p class="text-[#0A0A0A]/70 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10 font-bold">
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">
             Akses langsung ke raw data dan visualisasinya membantu memitigasi bias. Dengan memetakan data <span class="text-[#0A0A0A] font-extrabold underline decoration-black/20 decoration-2 underline-offset-4">Flow & Price Imbalance</span>, VADA mengungkap apa yang disembunyikan oleh pergerakan harga.
           </p>
 
@@ -267,7 +285,7 @@
       <div class="glass-2-0 liquid-glass-glow rounded-[24px] md:rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group">
         <div>
           <div class="text-[0.68rem] font-bold text-[#E2FF00] uppercase tracking-widest mb-3 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#E2FF00] animate-pulse"></span>Let's Collaborate
+            <span class="w-2 h-2 rounded-full bg-black animate-pulse"></span>Let's Collaborate
           </div>
           <h2 class="text-3xl md:text-5xl font-black text-white tracking-tighter mb-2">Build something iconic.</h2>
           <p class="text-white/50 text-sm max-w-md">Tertarik untuk membangun relasi atau berkolaborasi? Diskusikan ide Anda sekarang.</p>
@@ -289,7 +307,7 @@
           <img src="assets/profile-hero.png" alt="" class="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 grayscale group-hover:grayscale-0 transition-all duration-500">
           <span class="font-black text-white text-xl tracking-tight">Gregorius Sergio</span>
         </a>
-        <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-lg relative z-10 font-medium">Focused on System Architecture, Data Precision, and UI/UX Mastery. Based in Pontianak, Indonesia.</p>
+        <p class="text-[#0A0A0A]/70 text-sm md:text-base leading-relaxed max-w-lg relative z-10 font-bold">Focused on System Architecture, Data Precision, and UI/UX Mastery. Based in Pontianak, Indonesia.</p>
         <div class="flex gap-4 mt-8">
           <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
             class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-[#0A0A0A] transition-all text-xs font-bold">GH</a>
@@ -352,60 +370,34 @@
   </script>
 
     
-    <script>
-      const lenis = new Lenis();
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-    </script>
+    
 
 
     
-    <style>
-      html.lenis { height: auto; }
-      .lenis.lenis-smooth { scroll-behavior: auto !important; }
-      .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-      .lenis.lenis-stopped { overflow: hidden; }
-      .lenis.lenis-scrolling iframe { pointer-events: none; }
-    </style>
+    
+    
+
+
+    
+    
+    
+
+
+    
+
+
+    
+
+
+    <!-- Lenis CSS & JS (Optimized from UI-Layouts) -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
     <script>
       const lenis = new Lenis({
         duration: 1.5,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        orientation: 'vertical',
-        gestureOrientation: 'vertical',
         smoothWheel: true,
-        wheelMultiplier: 1.1,
-        infinite: false,
-      });
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-    </script>
-
-
-    <!-- Lenis Smooth Scroll (Optimized) -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <style>
-      html.lenis { height: auto; }
-      .lenis.lenis-smooth { scroll-behavior: auto !important; }
-      .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-      .lenis.lenis-stopped { overflow: hidden; }
-      .lenis.lenis-scrolling iframe { pointer-events: none; }
-    </style>
-    <script>
-      const lenis = new Lenis({
-        lerp: 0.1, // Adjusted for smoother but practical response
-        duration: 1.2,
-        orientation: 'vertical',
-        gestureOrientation: 'vertical',
-        smoothWheel: true,
-        wheelMultiplier: 1.0,
-        infinite: false,
+        wheelMultiplier: 1,
       });
       function raf(time) {
         lenis.raf(time);
