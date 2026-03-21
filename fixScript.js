@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+const fs = require('fs');
+const files = fs.readdirSync('.').filter(f => f.startsWith('project-') && f.endsWith('.html'));
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grembit Fronton | Gregorius Sergio</title>
-  <meta name="description"
-    content="Grembit Fronton — algorithmic momentum-based system on Binance Futures by Gregorius Sergio.">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+const goodScript = `  <script>
     const hbg = document.getElementById('hbg'), mnav = document.getElementById('mnav'), hbs = document.querySelectorAll('.hb');
     function toggleNav() {
       const o = hbg.classList.toggle('open');
@@ -27,10 +20,17 @@
         const rect = el.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        el.style.setProperty('--x', `${x}px`);
-        el.style.setProperty('--y', `${y}px`);
+        el.style.setProperty('--x', \`\${x}px\`);
+        el.style.setProperty('--y', \`\${y}px\`);
       });
     });
   </script>
 </body>
-</html>
+</html>`;
+
+for (const f of files) {
+  let text = fs.readFileSync(f, 'utf8');
+  let newText = text.replace(/<script>[\s\S]*?<\/html>/, goodScript);
+  fs.writeFileSync(f, newText, 'utf8');
+}
+console.log('Fixed script blocks.');
