@@ -56,11 +56,11 @@
   </style>
 </head>
 
-<body class="bg-ink text-white font-sans antialiased overflow-x-hidden">
+<body class="bg-[#0A0A0A] text-white font-sans antialiased overflow-x-hidden">
 
   <!-- NAV -->
   <nav id="nav"
-    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-ink/80 backdrop-blur-xl border-b border-white/5 transition-all">
+    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-white/5 transition-all">
     <a href="index.html" class="flex items-center gap-2.5 font-bold text-sm text-white tracking-tight">
       <img src="assets/profile-hero.png" alt=""
         class="w-8 h-8 rounded-full object-cover ring-2 ring-white/10 grayscale">
@@ -76,12 +76,12 @@
       <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
     </button>
   </nav>
-  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-ink border-b border-white/10 flex-col px-6 py-5 gap-1">
+  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-[#0A0A0A] border-b border-white/10 flex-col px-6 py-5 gap-1">
     <a href="index.html#about" onclick="closeNav()"
-      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-y transition-colors">About</a>
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">About</a>
     <a href="index.html#projects" onclick="closeNav()"
-      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-y transition-colors">← Projects</a>
-    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-y">Contact →</a>
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">← Projects</a>
+    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-[#E2FF00]">Contact →</a>
   </div>
 
   <!-- ── HERO: BLACK ── -->
@@ -90,9 +90,9 @@
       <!-- Breadcrumb -->
       <div
         class="flex items-center gap-2 text-[0.68rem] text-white/30 font-bold uppercase tracking-widest mb-10 reveal">
-        <a href="index.html" class="hover:text-y transition-colors">Home</a>
+        <a href="index.html" class="hover:text-[#E2FF00] transition-colors">Home</a>
         <span>›</span>
-        <a href="index.html#projects" class="hover:text-y transition-colors">Projects</a>
+        <a href="index.html#projects" class="hover:text-[#E2FF00] transition-colors">Projects</a>
         <span>›</span>
         <span class="text-white/60">Grembit 10 Axiom</span>
       </div>
@@ -101,11 +101,11 @@
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 items-stretch">
         <!-- Main Title Card -->
         <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] p-6 md:p-10 flex flex-col justify-center reveal">
-          <div class="inline-flex items-center gap-2 text-[0.6rem] font-black uppercase text-y/90 bg-y/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-y/20">
-            <span class="w-1.5 h-1.5 rounded-full bg-y animate-pulse"></span>Under Developing
+          <div class="inline-flex items-center gap-2 text-[0.6rem] font-black uppercase text-[#E2FF00]/90 bg-[#E2FF00]/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-y/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#E2FF00] animate-pulse"></span>Under Developing
           </div>
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tightest leading-[1] text-white mb-6 uppercase">
-            Grembit 10<br><span class="text-y">Axiom</span>
+            Grembit 10<br><span class="text-[#E2FF00]">Axiom</span>
           </h1>
           <p class="text-white/40 text-sm leading-relaxed max-w-sm">Koneksi langsung ke Binance API, pembagian porsi Core-Satellite untuk meminimalkan risiko, dan Take Profit algoritmik yang telah terkalibrasi secara matematis untuk efisiensi maksimal.</p>
         </div>
@@ -124,12 +124,12 @@
           <span class="text-white/60 font-bold text-xs uppercase tracking-wider">Tech Stack</span>
         </div>
         <div class="flex flex-wrap gap-2 justify-center">
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">PYTHON</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">JUPYTELAB</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">BINANCE API</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">CCTX</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">PANDAS</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-y hover:text-ink transition-all cursor-default">NUMPHY</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">PYTHON</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">JUPYTELAB</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">BINANCE API</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">CCTX</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">PANDAS</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">NUMPHY</span>
         </div>
       </div>
     </div>
@@ -149,13 +149,13 @@
           <p class="text-white/50 text-base leading-relaxed max-w-2xl">Grembit 10 <span class="text-white font-bold">Axiom</span> adalah BOT Quantitative Algo yang dibangun di atas fondasi probabilitas matematis melalui analisis statistik intensif.</p>
           
           <!-- Slide Box on Hover -->
-          <div class="absolute inset-x-0 bottom-0 bg-y p-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-center justify-between">
+          <div class="absolute inset-x-0 bottom-0 bg-[#E2FF00] p-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-center justify-between">
             <p class="text-ink font-bold text-sm uppercase tracking-wide">Menghapus bias psikologis dari strategi perdagangan harian.</p>
             <span class="text-ink/30 font-black text-4xl">01</span>
           </div>
         </div>
 
-        <div class="md:col-span-4 bg-y rounded-[24px] md:rounded-[40px] p-7 md:p-12 flex flex-col justify-between reveal shadow-lg group relative overflow-hidden">
+        <div class="md:col-span-4 bg-[#E2FF00] rounded-[24px] md:rounded-[40px] p-7 md:p-12 flex flex-col justify-between reveal shadow-lg group relative overflow-hidden">
           <div class="relative z-10">
             <span class="text-[0.6rem] font-black text-ink/30 uppercase tracking-[0.3em] block mb-4">Risk Mgmt</span>
             <h3 class="text-ink font-black text-3xl tracking-tightest leading-tight uppercase">Risk<br>Zero Bias.</h3>
@@ -164,7 +164,7 @@
           
           <!-- Hover reveal overlay -->
           <div class="absolute inset-0 bg-ink transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 flex flex-col justify-center p-10">
-            <span class="text-y font-black text-[0.6rem] uppercase tracking-widest mb-4">Adaptive</span>
+            <span class="text-[#E2FF00] font-black text-[0.6rem] uppercase tracking-widest mb-4">Adaptive</span>
             <p class="text-white text-xs font-bold leading-relaxed uppercase">Stoploss based on the situation & Dynamic position sizing.</p>
           </div>
         </div>
@@ -186,7 +186,7 @@
         <div class="md:col-span-7 bg-ink rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal border border-white/5 hover:-translate-y-1 transition-all shadow-md group">
           <div class="flex justify-between items-start mb-12">
             <h4 class="text-white/40 text-[0.6rem] font-black uppercase tracking-[0.4em]">01 / Logic</h4>
-            <div class="w-10 h-10 rounded-full bg-y flex items-center justify-center text-ink font-black text-xs transition-transform group-hover:rotate-12 shadow-sm">A</div>
+            <div class="w-10 h-10 rounded-full bg-[#E2FF00] flex items-center justify-center text-ink font-black text-xs transition-transform group-hover:rotate-12 shadow-sm">A</div>
           </div>
           <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Confluence Analysis</h3>
           <p class="text-white/80 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md mb-4">Validasi berlapis berdasarkan indikator teknis atau multi Indikator, memperkuat thesis dalam pengambilan keputusan.</p>
@@ -197,7 +197,7 @@
         </div>
 
         <!-- Box 02: Small Yellow -->
-        <div class="md:col-span-5 bg-y rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md">
+        <div class="md:col-span-5 bg-[#E2FF00] rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md">
           <h4 class="text-ink/40 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-12">02 / Defense</h4>
           <h3 class="text-ink font-black text-2xl tracking-tighter uppercase mb-4">Risk Shield</h3>
           <p class="text-ink/80 text-[0.7rem] font-bold leading-loose uppercase mb-6">Sistem proteksi modal otomatis melalui risk management yang ketat dan konservatif.</p>
@@ -261,7 +261,7 @@
         </div>
         <div class="flex flex-wrap gap-3 flex-shrink-0">
           <a href="index.html#contact"
-            class="bg-y text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-y-dark transition-all hover:-translate-y-0.5 shadow-sm">See
+            class="bg-[#E2FF00] text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-[#E2FF00]-dark transition-all hover:-translate-y-0.5 shadow-sm">See
             Social Links →</a>
         </div>
       </div>
@@ -269,7 +269,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-ink border-t border-white/5">
+  <footer class="bg-[#0A0A0A] border-t border-white/5">
     <div class="w-full max-w-7xl mx-auto px-5 md:px-12 py-10 md:py-14 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
       <div class="md:col-span-2">
         <a href="index.html" class="flex items-center gap-2.5 mb-4">
@@ -282,13 +282,13 @@
           Pontianak, Indonesia..</p>
         <div class="flex gap-3 mt-6">
           <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
-            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">GH</a>
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">GH</a>
           <a href="https://www.linkedin.com/in/gregorius-sergio-37762b300/" target="_blank" rel="noopener"
-            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">LI</a>
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">LI</a>
           <a href="https://www.instagram.com/gregorius_gesergio/" target="_blank" rel="noopener"
-            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">IG</a>
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">IG</a>
           <a href="https://www.tiktok.com/@gregoryp1.1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"
-            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-xs font-bold">TK</a>
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">TK</a>
         </div>
       </div>
       <div>
@@ -308,7 +308,7 @@
       <div>
         <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Projects</h5>
         <ul class="space-y-3">
-          <li><a href="project-grembit.html" class="text-sm text-y font-semibold">Grembit 10 Axiom</a></li>
+          <li><a href="project-grembit.html" class="text-sm text-[#E2FF00] font-semibold">Grembit 10 Axiom</a></li>
           <li><a href="project-fronton.html" class="text-sm text-white/50 hover:text-white transition-colors">Grembit Fronton</a></li>
           <li><a href="project-mevers.html" class="text-sm text-white/50 hover:text-white transition-colors">Grembit Mevers 7</a></li>
           <li><a href="project-grembit-vada.html"
@@ -322,7 +322,7 @@
       <div
         class="w-full max-w-7xl mx-auto px-5 md:px-12 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3">
         <span class="text-xs text-white/25">© 2025 Gregorius Sergio. All rights reserved.</span>
-        <span class="text-xs text-white/25">Built with <span class="text-y">Tailwind CSS and Vibe coded</span> ·
+        <span class="text-xs text-white/25">Built with <span class="text-[#E2FF00]">Tailwind CSS and Vibe coded</span> ·
           Deployed on GitHub Pages</span>
       </div>
     </div>
@@ -341,6 +341,26 @@
     const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
+    // Liquid Glass Glow Effect
+    document.querySelectorAll('.liquid-glass-glow').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        el.style.setProperty('--x', `${x}px`);
+        el.style.setProperty('--y', `${y}px`);
+      });
+    });
+    // Liquid Glass Glow Effect
+    document.querySelectorAll('.liquid-glass-glow').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        el.style.setProperty('--x', `${x}px`);
+        el.style.setProperty('--y', `${y}px`);
+      });
+    });
   </script>
 </body>
 
