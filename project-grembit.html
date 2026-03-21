@@ -8,7 +8,305 @@
   <meta name="description"
     content="Grembit 10 Axiom â€” algorithmic trading system on Binance Futures by Gregorius Sergio.">
   <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: { ink: '#0A0A0A', 'ink-soft': '#222222', cream: '#FAFAF8', y: '#FACC15', 'y-dark': '#EAB308' },
+          letterSpacing: { tightest: '-0.06em', tighter: '-0.04em' },
+          borderRadius: { bento: '20px' },
+          boxShadow: { 'bento-hover': '0 8px 30px rgba(0,0,0,0.12)', 'y': '0 8px 24px rgba(234,179,8,0.4)' },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .img-zoom img {
+      transition: transform .45s ease;
+    }
+
+    .img-zoom:hover img {
+      transform: scale(1.04);
+    }
+
+    /* â•â•â• MOBILE-FIRST OPTIMIZATIONS â•â•â• */
+    @media (max-width: 767px) {
+      .rounded-bento { border-radius: 16px; }
+      .img-zoom:hover img { transform: none; }
+      /* Make slide-up hover panels visible on mobile */
+      .group .translate-y-full { transform: translateY(0); position: relative; }
+      .group .-translate-x-full { transform: translateX(0); position: relative; }
+    }
+  </style>
+</head>
+
+<body class="bg-[#0A0A0A] text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav id="nav"
+    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-white/5 transition-all">
+    <a href="index.html" class="flex items-center gap-2.5 font-bold text-sm text-white tracking-tight">
+      <img src="assets/profile-hero.png" alt=""
+        class="w-8 h-8 rounded-full object-cover ring-2 ring-white/10 grayscale">
+      Gregorius Sergio
+    </a>
+    <a href="index.html#projects"
+      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">â†
+      All Projects</a>
+    <button id="hbg" onclick="toggleNav()"
+      class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer">
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+    </button>
+  </nav>
+  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-[#0A0A0A] border-b border-white/10 flex-col px-6 py-5 gap-1">
+    <a href="index.html#about" onclick="closeNav()"
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">About</a>
+    <a href="index.html#projects" onclick="closeNav()"
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">â† Projects</a>
+    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-[#E2FF00]">Contact â†’</a>
+  </div>
+
+  <!-- â”€â”€ HERO: BLACK â”€â”€ -->
+  <section class="bg-ink pt-16 pb-0">
+    <div class="w-full max-w-7xl mx-auto px-5 md:px-12 py-10 md:py-16">
+      <!-- Breadcrumb -->
+      <div
+        class="flex items-center gap-2 text-[0.68rem] text-white/30 font-bold uppercase tracking-widest mb-10 reveal">
+        <a href="index.html" class="hover:text-[#E2FF00] transition-colors">Home</a>
+        <span>â€º</span>
+        <a href="index.html#projects" class="hover:text-[#E2FF00] transition-colors">Projects</a>
+        <span>â€º</span>
+        <span class="text-white/60">Grembit 10 Axiom</span>
+      </div>
+
+      <!-- Polished Hero Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 items-stretch">
+        <!-- Main Title Card -->
+        <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] p-6 md:p-10 flex flex-col justify-center reveal">
+          <div class="inline-flex items-center gap-2 text-[0.6rem] font-black uppercase text-[#E2FF00]/90 bg-[#E2FF00]/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-y/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#E2FF00] animate-pulse"></span>Under Developing
+          </div>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tightest leading-[1] text-white mb-6 uppercase">
+            Grembit 10<br><span class="text-[#E2FF00]">Axiom</span>
+          </h1>
+          <p class="text-white/40 text-sm leading-relaxed max-w-sm">Koneksi langsung ke Binance API, pembagian porsi Core-Satellite untuk meminimalkan risiko, dan Take Profit algoritmik yang telah terkalibrasi secara matematis untuk efisiensi maksimal.</p>
+        </div>
+
+        <!-- Image Card (Precise padding) -->
+        <div class="md:col-span-5 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] overflow-hidden reveal relative group flex items-center justify-center p-2 md:p-3">
+          <img src="assets/grembit10-cover.png" alt="Axiom 10" class="w-full h-auto rounded-[18px] md:rounded-[32px] shadow-2xl transition-transform duration-1000 group-hover:scale-[1.02] grayscale group-hover:grayscale-0">
+          <div class="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Compact Tech Stack Bar -->
+      <div class="mt-6 md:mt-10 md:col-span-12 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] p-6 md:px-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-8 reveal">
+        <div class="flex flex-col">
+          <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-0.5">Architecture</span>
+          <span class="text-white/60 font-bold text-xs uppercase tracking-wider">Tech Stack</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">PYTHON</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">JUPYTELAB</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">BINANCE API</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">CCTX</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">PANDAS</span>
+          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default">NUMPHY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DETAIL: TWIN-SCROLL NARRATIVE ── -->
+  <section class="bg-[#0A0A0A] py-16 md:py-24 relative">
+    <div class="w-full max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+      
+      <!-- Left: Sticky Title (1/3) -->
+      <div class="lg:col-span-4 hidden lg:block">
+        <div class="sticky top-32 reveal">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-px bg-[#E2FF00]/30"></span>
+            <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]/50">Deep Dive</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tightest mb-6">
+            Precision Over<br>Speculation.
+          </h2>
+          <p class="text-white/40 text-sm leading-relaxed mb-10">Grembit 10 Axiom adalah BOT Quantitative Algo yang dibangun di atas fondasi probabilitas matematis melalui analisis statistik intensif. Menghapus bias psikologis dari strategi perdagangan harian.</p>
+        </div>
+      </div>
+
+      <!-- Right: Scrolling Visuals & Data (2/3) -->
+      <div class="lg:col-span-8 flex flex-col gap-6 md:gap-10 border-l-0 lg:border-l border-white/5 lg:pl-10">
+        
+        <!-- Deep Dive Mobile Title -->
+        <div class="lg:hidden reveal mb-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-px bg-[#E2FF00]/30"></span>
+            <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]/50">Deep Dive</span>
+          </div>
+          <h2 class="text-3xl font-black text-white leading-tight tracking-tightest mb-4">Precision Over Speculation.</h2>
+          <p class="text-white/40 text-sm leading-relaxed">Grembit 10 Axiom adalah BOT Quantitative Algo yang dibangun di atas fondasi probabilitas matematis melalui analisis statistik intensif.</p>
+        </div>
+
+        <!-- Box 01: Confluence Analysis --->
+        <div class="glass-2-0 liquid-glass-glow rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5 group relative overflow-hidden mb-16 md:mb-24 max-w-[850px]">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Process 1</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-[#E2FF00] transition-colors relative z-10">Confluence Analysis</h3>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">Validasi berlapis berdasarkan indikator teknis atau multi Indikator, memperkuat thesis dalam pengambilan keputusan. Algoritma ini bersifat probabilistik dan <span class="text-[#E2FF00] font-bold">non-repaint</span>.</p>
+          <div class="w-full h-[200px] md:h-[280px] rounded-[16px] overflow-hidden mt-6 border border-white/5 relative z-10">
+            <img src="assets/axiom10-2.png" alt="Axiom 10 Strategy" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A0A0A]/60 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
+        <!-- Box 02: Risk Shield & Speed --->
+        <div class="glass-2-0 liquid-glass-glow rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5 group relative overflow-hidden mb-16 md:mb-24 max-w-[850px]">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Defense Mechanism</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-[#E2FF00] transition-colors relative z-10">Risk Zero Bias.</h3>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">Algoritma yang merespon volatilitas real-time untuk proteksi modal maksimal. Menggunakan <span class="text-white font-bold">Stoploss based on the situation</span> dan <span class="text-white font-bold">Dynamic position sizing</span>.</p>
+          
+          <div class="flex flex-col gap-4 mt-6 relative z-10">
+            <div class="bg-white/[0.02] border border-white/5 rounded-[16px] p-5 hover:bg-white/5 transition-colors">
+              <h4 class="text-[#E2FF00] font-bold text-sm mb-2">Risk Shield:</h4>
+              <p class="text-white/50 text-xs md:text-sm leading-relaxed">Sistem proteksi modal otomatis melalui risk management yang ketat dan konservatif dengan perlindungan adaptif.</p>
+            </div>
+            <div class="bg-white/[0.02] border border-white/5 rounded-[16px] p-5 hover:bg-white/5 transition-colors">
+              <h4 class="text-[#E2FF00] font-bold text-sm mb-2">Low Latency:</h4>
+              <p class="text-white/50 text-xs md:text-sm leading-relaxed">Konektivitas WebSocket langsung ke API Binance dengan latensi rendah dibantu jaringan Cloudflare WARP.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 03: Proof & Walk-Forward --->
+        <div class="glass-2-0 liquid-glass-glow rounded-[32px] p-8 md:p-12 md:p-16 reveal shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5 group relative overflow-hidden mb-16 md:mb-24 max-w-[850px]">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Performance</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-8 group-hover:text-[#E2FF00] transition-colors relative z-10">Walk-Forward Test</h3>
+          
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">
+            Diuji backtest melalui <span class="text-white font-bold">3 tahun data historis</span> dengan Sharpe ratio yang sudah ditentukan dan low drawdown, memastikan keandalan saat kondisi pasar ekstrem.
+          </p>
+
+          <div class="w-full h-[260px] md:h-[350px] rounded-[16px] overflow-hidden mt-6 border border-white/5 relative z-10">
+
+            <!-- Interactive Hotspot -->
+            <div class="absolute top-1/3 left-1/4 z-20 group/hotspot cursor-pointer hidden md:block">
+              <div class="w-4 h-4 bg-[#E2FF00] rounded-full animate-ping absolute opacity-70"></div>
+              <div class="w-4 h-4 bg-[#E2FF00] rounded-full relative z-10 border-2 border-[#0A0A0A]"></div>
+              
+              <!-- Floating Glass Card -->
+              <div class="absolute top-8 -left-24 opacity-0 invisible group-hover/hotspot:opacity-100 group-hover/hotspot:visible transition-all duration-500 w-64 glass-2-0 p-5 rounded-[16px] flex flex-col gap-2 pointer-events-none transform translate-y-4 group-hover/hotspot:translate-y-0 shadow-2xl border border-white/10 backdrop-blur-3xl">
+                <span class="text-[#E2FF00] font-black text-[0.6rem] uppercase tracking-widest">Interactive Insight</span>
+                <span class="text-white text-xs font-medium leading-relaxed">Elemen UI ini menyoroti data probabilitas tertinggi secara real-time tanpa delay.</span>
+              </div>
+            </div>
+
+            <img src="assets/axiom10-3.png" alt="Axiom 10 Proof" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A0A0A]/60 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- â”€â”€ CONTACT STRIP: BLACK â”€â”€ -->
+  <section class="bg-ink py-16">
+    <div class="w-full max-w-7xl mx-auto px-5 md:px-12">
+      <div
+        class="bg-white rounded-bento p-6 md:p-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 reveal">
+        <div>
+          <div class="text-[0.68rem] font-bold text-ink/70 uppercase tracking-widest mb-2">Tertarik?</div>
+          <h2 class="text-xl md:text-3xl font-black text-ink tracking-tighter">Silahkan berkenalan dengan saya.</h2>
+          <p class="text-ink/60 text-sm mt-1">Tertarik untuk membangun relasi atau berkolaborasi? Hubungi saya melalui
+            media sosial.</p>
+        </div>
+        <div class="flex flex-wrap gap-3 flex-shrink-0">
+          <a href="index.html#contact"
+            class="bg-[#E2FF00] text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-[#E2FF00]-dark transition-all hover:-translate-y-0.5 shadow-sm">See
+            Social Links â†’</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0A0A0A] border-t border-white/5">
+    <div class="w-full max-w-7xl mx-auto px-5 md:px-12 py-10 md:py-14 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+      <div class="md:col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 mb-4">
+          <img src="assets/profile-hero.png" alt=""
+            class="w-9 h-9 rounded-full object-cover ring-2 ring-white/10 grayscale">
+          <span class="font-black text-white text-base tracking-tight">Gregorius Sergio</span>
+        </a>
+        <p class="text-white/40 text-sm leading-relaxed max-w-xs">Focused on Self developing, Crypto Trading, and
+          learning new things. Based in
+          Pontianak, Indonesia..</p>
+        <div class="flex gap-3 mt-6">
+          <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">GH</a>
+          <a href="https://www.linkedin.com/in/gregorius-sergio-37762b300/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">LI</a>
+          <a href="https://www.instagram.com/gregorius_gesergio/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">IG</a>
+          <a href="https://www.tiktok.com/@gregoryp1.1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-ink hover:border-y transition-all text-xs font-bold">TK</a>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Navigation</h5>
+        <ul class="space-y-3">
+          <li><a href="index.html#about" class="text-sm text-white/50 hover:text-white transition-colors">About</a></li>
+          <li><a href="index.html#skills" class="text-sm text-white/50 hover:text-white transition-colors">Skills</a>
+          </li>
+          <li><a href="index.html#projects"
+              class="text-sm text-white/50 hover:text-white transition-colors">Projects</a></li>
+          <li><a href="index.html#education"
+              class="text-sm text-white/50 hover:text-white transition-colors">Education</a></li>
+          <li><a href="index.html#contact" class="text-sm text-white/50 hover:text-white transition-colors">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Projects</h5>
+        <ul class="space-y-3">
+          <li><a href="project-grembit.html" class="text-sm text-[#E2FF00] font-semibold">Grembit 10 Axiom</a></li>
+          <li><a href="project-fronton.html" class="text-sm text-white/50 hover:text-white transition-colors">Grembit Fronton</a></li>
+          <li><a href="project-mevers.html" class="text-sm text-white/50 hover:text-white transition-colors">Grembit Mevers 7</a></li>
+          <li><a href="project-grembit-vada.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Grembit VADA</a></li>
+          <li><a href="project-portfolio.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Portfolio Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5">
+      <div
+        class="w-full max-w-7xl mx-auto px-5 md:px-12 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <span class="text-xs text-white/25">Â© 2025 Gregorius Sergio. All rights reserved.</span>
+        <span class="text-xs text-white/25">Built with <span class="text-[#E2FF00]">Tailwind CSS and Vibe coded</span> Â·
+          Deployed on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
     const hbg = document.getElementById('hbg'), mnav = document.getElementById('mnav'), hbs = document.querySelectorAll('.hb');
     function toggleNav() {
       const o = hbg.classList.toggle('open');
@@ -17,11 +315,11 @@
       hbs[1].style.opacity = o ? '0' : ''; hbs[2].style.transform = o ? 'translateY(-7px) rotate(-45deg)' : '';
     }
     function closeNav() { hbg.classList.remove('open'); mnav.style.display = 'none'; hbs.forEach(b => { b.style.transform = ''; b.style.opacity = ''; }); }
-    window.addEventListener('scroll', () => { document.getElementById('nav').style.backgroundColor = window.scrollY > 20 ? 'rgba(10,10,10,0.9)' : 'rgba(10,10,10,0.8)'; document.getElementById('nav').style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.5)' : 'none'; }, { passive: true });
+    window.addEventListener('scroll', () => { document.getElementById('nav').style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.4)' : 'none'; }, { passive: true });
     const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Liquid Glass Glow Effect
+  </script>
+        // Liquid Glass Glow Effect
     document.querySelectorAll('.liquid-glass-glow').forEach(el => {
       el.addEventListener('mousemove', e => {
         const rect = el.getBoundingClientRect();
@@ -33,4 +331,5 @@
     });
   </script>
 </body>
+
 </html>
