@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 
@@ -799,3 +800,777 @@
  
  
  
+=======
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gregorius Sergio | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Gregorius Sergio — developer specializing in algorithmic trading and data-driven software.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            ink: '#0A0A0A',
+            'ink-soft': '#222222',
+            cream: '#FAFAF8',
+            'y': '#FACC15',
+            'y-dark': '#EAB308',
+            'y-soft': '#FEF9C3',
+          },
+          letterSpacing: {
+            tightest: '-0.06em',
+            tighter: '-0.04em',
+            tight: '-0.025em',
+          },
+          borderRadius: {
+            bento: '20px',
+          },
+          boxShadow: {
+            'bento': '0 1px 3px rgba(0,0,0,0.08)',
+            'bento-hover': '0 8px 30px rgba(0,0,0,0.12)',
+            'y': '0 8px 24px rgba(234,179,8,0.4)',
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="preload" as="image" href="assets/profile-nav.png" fetchpriority="high">
+
+  <style>
+    /* Scroll fade-in */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* blink dot */
+    .blink {
+      animation: blink 2.4s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .2
+      }
+    }
+
+    /* Smooth image hover */
+    .img-zoom img {
+      transition: transform .45s ease;
+    }
+
+    .img-zoom:hover img {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+
+<body class="bg-ink text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <nav id="nav"
+    class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 bg-ink/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+    <a href="#hero" class="flex items-center gap-2.5 font-bold text-sm text-white tracking-tight">
+      <img src="assets/profile-hero.png" alt=""
+        class="w-8 h-8 rounded-full object-cover ring-2 ring-white/10 grayscale">
+      Gregorius Sergio
+    </a>
+
+    <ul class="hidden md:flex items-center gap-7 list-none">
+      <li><a href="#about"
+          class="text-xs font-semibold text-white/50 hover:text-white transition-colors uppercase tracking-widest">About</a>
+      </li>
+      <li><a href="#workflow"
+          class="text-xs font-semibold text-white/50 hover:text-white transition-colors uppercase tracking-widest">Workflow</a>
+      </li>
+      <li><a href="#projects"
+          class="text-xs font-semibold text-white/50 hover:text-white transition-colors uppercase tracking-widest">Projects</a>
+      </li>
+      <li><a href="#education"
+          class="text-xs font-semibold text-white/50 hover:text-white transition-colors uppercase tracking-widest">Education</a>
+      </li>
+      <li><a href="#contact"
+          class="text-xs font-black bg-y text-ink px-5 py-2 rounded-full hover:bg-white transition-colors uppercase tracking-widest">Contact</a>
+      </li>
+    </ul>
+
+    <button id="hbg" onclick="toggleNav()"
+      class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer">
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+      <span class="hb block w-5 h-[2px] bg-white rounded transition-all duration-300"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mnav" class="hidden fixed top-16 inset-x-0 z-40 bg-ink border-b border-white/10 flex-col px-6 py-5 gap-1">
+    <a href="#about" onclick="closeNav()"
+      class="py-3 text-sm font-medium text-white/70 border-b border-white/5 hover:text-y transition-colors">About</a>
+    <a href="#workflow" onclick="closeNav()"
+      class="py-3 text-sm font-medium text-white/70 border-b border-white/5 hover:text-y transition-colors">Workflow</a>
+    <a href="#projects" onclick="closeNav()"
+      class="py-3 text-sm font-medium text-white/70 border-b border-white/5 hover:text-y transition-colors">Projects</a>
+    <a href="#education" onclick="closeNav()"
+      class="py-3 text-sm font-medium text-white/70 border-b border-white/5 hover:text-y transition-colors">Education</a>
+    <a href="#contact" onclick="closeNav()"
+      class="py-3 text-sm font-bold text-y hover:text-white transition-colors">Contact →</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO — BLACK BG, BENTO GRID
+  ═══════════════════════════════════════════ -->
+  <section id="hero" class="min-h-screen bg-ink pt-16 flex items-center">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-16">
+
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-auto">
+
+        <!-- [A] Big Headline — col 1-8 -->
+        <div
+          class="md:col-span-8 bg-ink-soft rounded-bento p-8 md:p-12 flex flex-col justify-between min-h-[280px] border border-white/5 reveal">
+          <div>
+            <h1 class="text-[clamp(3rem,6.5vw,5.5rem)] font-black leading-[1] tracking-tightest text-white">
+              Gregorius<br><span class="text-y">Sergio.</span>
+            </h1>
+            <p class="text-white/50 text-base mt-5 max-w-sm leading-relaxed">
+              Pengembangan diri dan merancang sistem digital untuk kebutuhan yang personal, jujur serta fungsional.
+            </p>
+          </div>
+        </div>
+
+        <!-- [B] Photo — col 9-12 -->
+        <div class="md:col-span-4 bg-y rounded-bento overflow-hidden relative min-h-[280px] md:min-h-0 img-zoom reveal">
+          <img src="assets/about-personal-natural-transparent.png" alt="Gregorius Sergio"
+            class="w-full h-full object-cover object-top absolute inset-0">
+          <!-- name watermark -->
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink to-transparent p-5">
+            <span class="text-white/60 text-[0.7rem] font-bold uppercase tracking-widest">Pontianak, ID</span>
+          </div>
+        </div>
+
+        <!-- [C] CTA buttons — col 1-5 -->
+        <div class="md:col-span-5 bg-y rounded-bento p-7 flex flex-col justify-between reveal">
+          <div class="text-[0.68rem] font-bold text-ink/50 uppercase tracking-widest">Get started</div>
+          <div>
+            <p class="text-ink font-bold text-lg mb-5 leading-tight">Siap untuk melihat apa yang saya bangun?</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#projects"
+                class="bg-ink text-white font-bold text-sm px-6 py-3 rounded-full hover:bg-ink-soft transition-all hover:-translate-y-0.5 inline-flex items-center gap-2">
+                View Projects
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="#contact"
+                class="bg-white/20 text-ink font-bold text-sm px-6 py-3 rounded-full hover:bg-white transition-all hover:-translate-y-0.5 inline-flex items-center gap-2">
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [D] Fokus Diri — col 6-8 -->
+        <div class="md:col-span-3 bg-white rounded-bento p-7 flex flex-col justify-between reveal">
+          <svg class="w-8 h-8 text-ink mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M9 15l3-3 4 4 5-5M9 15V9" />
+          </svg>
+          <div>
+            <div class="text-ink font-black text-base leading-tight mb-1">Fokus Diri</div>
+            <div class="text-ink/50 text-xs font-semibold">Crypto Enthusiast, Crypto Quantitative Trading, Investment
+            </div>
+          </div>
+        </div>
+
+        <!-- [E] Minat Diri -->
+        <div
+          class="md:col-span-4 bg-ink-soft border border-white/10 rounded-bento p-7 flex flex-col justify-between reveal">
+          <div class="text-[0.65rem] font-bold text-white/30 uppercase tracking-widest">Minat Diri/Hobi</div>
+          <div class="mt-4">
+            <div class="text-white font-black text-base leading-tight mb-1">Music, Olahraga & Gaming</div>
+            <div class="text-white/40 text-xs mt-1 leading-relaxed">Menjaga fokus dengan mendengar musik dan suka
+              bermain gitar, workout untuk
+              menjaga kesehatan, dan gaming untuk mengisi waktu luang.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT — WHITE BG, BENTO GRID
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="bg-white py-20">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/70">About Me</span>
+        <div class="flex-1 h-px bg-black/10"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+        <!-- [A] Main text — col 1-7 -->
+        <div class="md:col-span-7 bg-black rounded-bento p-10 flex flex-col justify-between min-h-[340px] reveal">
+          <div class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest">Who I am</div>
+          <div>
+            <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-black text-white leading-[1.1] tracking-tightest mb-5">
+              Fokus Mendalami<br>Crypto & Coding.
+            </h2>
+            <p class="text-white/60 text-sm leading-[1.85] max-w-lg">
+              Saya adalah seseorang yang senang mengeksplorasi banyak hal. Saya tipe orang yang lebih suka belajar
+              dengan cara mencoba langsung diimbangi dengan pembelajaran secara teori.
+            </p>
+          </div>
+        </div>
+
+        <!-- [B] Photo — col 8-12 -->
+        <div class="md:col-span-5 bg-y rounded-bento overflow-hidden relative min-h-[300px] img-zoom reveal">
+          <img src="assets/about-main.png" alt="About" class="w-full h-full object-cover object-top absolute inset-0">
+        </div>
+
+        <!-- [C] Bio paragraph — col 1-5 -->
+        <div class="md:col-span-5 bg-cream border border-black/5 rounded-bento p-8 reveal">
+          <div class="text-[0.68rem] font-bold text-black/30 uppercase tracking-widest mb-4">Background</div>
+          <p class="text-black/70 text-sm leading-[1.85]">
+            Untuk menjaga keseimbangan harian di luar ketertarikan saya pada dunia Crypto, saya terbiasa meluangkan
+            waktu dengan aktif berolahraga, menjadikan musik untuk memberikan fokus, serta menikmati waktu luang dengan
+            bermain game.
+          </p>
+        </div>
+
+        <!-- [D] Passion quote — col 6-9 -->
+        <div class="md:col-span-4 bg-y rounded-bento p-8 flex flex-col justify-between reveal">
+          <div class="text-[0.68rem] font-bold text-ink/40 uppercase tracking-widest">Passion</div>
+          <blockquote class="text-ink font-black text-xl leading-tight tracking-tight">
+            "Learning in<br>Process. Keep moving no matter what"
+          </blockquote>
+        </div>
+
+        <!-- [E] Tags — col 10-12 -->
+        <div class="md:col-span-3 bg-black rounded-bento p-8 flex flex-col justify-between reveal">
+          <div class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-4">Core Stack | Advance Beginner | Vibe Coding</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[0.7rem] font-bold text-y bg-white/5 px-3 py-1.5 rounded-full">Python</span>
+            <span class="text-[0.7rem] font-bold text-white bg-white/5 px-3 py-1.5 rounded-full">Google Antigravity</span>
+            <span class="text-[0.7rem] font-bold text-white bg-white/5 px-3 py-1.5 rounded-full">Jupyterlab</span>
+            <span class="text-[0.7rem] font-bold text-white bg-white/5 px-3 py-1.5 rounded-full">Tailwind CSS</span>
+            <span class="text-[0.7rem] font-bold text-white bg-white/5 px-3 py-1.5 rounded-full">Miniconda</span>
+            <span class="text-[0.7rem] font-bold text-white bg-white/5 px-3 py-1.5 rounded-full">HTML5 (Basic)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       WORKFLOW — DARK BG, BENTO GRID
+  ═══════════════════════════════════════════ -->
+  <section id="workflow" class="bg-ink py-20">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-white/70">My Workflow</span>
+        <div class="flex-1 h-px bg-white/10"></div>
+      </div>
+
+      <div class="bg-ink-soft border border-white/5 rounded-bento overflow-hidden reveal">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          
+          <!-- Step 01 -->
+          <div class="p-10 md:p-14 border-b md:border-b-0 md:border-r border-white/5 relative group">
+            <span class="text-6xl font-black text-white/5 absolute top-8 right-8 group-hover:text-y/10 transition-colors duration-500">01</span>
+            <div class="relative z-10">
+              <h3 class="text-white font-black text-xl mb-4 tracking-tight group-hover:text-y transition-colors">Market & Data Research</h3>
+              <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                Observasi mendalam terhadap struktur pasar menggunakan konsep <span class="text-white/80">Smart Money (SMC)</span>. 
+                Penarikan data historis secara real-time melalui integrasi API <span class="text-white/80">Binance</span> dan <span class="text-white/80">CCXT</span> untuk memastikan akurasi data primer.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="p-10 md:p-14 border-b border-white/5 md:border-b-0 relative group">
+            <span class="text-6xl font-black text-white/5 absolute top-8 right-8 group-hover:text-y/10 transition-colors duration-500">02</span>
+            <div class="relative z-10">
+              <h3 class="text-white font-black text-xl mb-4 tracking-tight group-hover:text-y transition-colors">Strategy Development</h3>
+              <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                Transformasi tesis trading ke dalam logika pemrograman <span class="text-white/80">Python</span>. 
+                Perancangan parameter teknikal, manajemen risiko <span class="text-white/80">(position sizing)</span>, serta mekanisme entry dan exit yang terkalibrasi secara matematis.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="p-10 md:p-14 border-b md:border-b-0 md:border-r border-white/5 relative group">
+            <span class="text-6xl font-black text-white/5 absolute top-8 right-8 group-hover:text-y/10 transition-colors duration-500">03</span>
+            <div class="relative z-10">
+              <h3 class="text-white font-black text-xl mb-4 tracking-tight group-hover:text-y transition-colors">Vibe Coding</h3>
+              <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                Implementasi kode dengan kecepatan tinggi melalui bantuan AI <span class="text-white/80">(Google Antigravity)</span>. 
+                Proses iterasi yang cepat memungkinkan penyempurnaan fitur dan perbaikan bug secara instan tanpa mengorbankan presisi logika.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="p-10 md:p-14 relative group">
+            <span class="text-6xl font-black text-white/5 absolute top-8 right-8 group-hover:text-y/10 transition-colors duration-500">04</span>
+            <div class="relative z-10">
+              <h3 class="text-white font-black text-xl mb-4 tracking-tight group-hover:text-y transition-colors">Backtesting & Deployment</h3>
+              <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                Verifikasi strategi menggunakan data historis untuk memvalidasi probabilitas keberhasilan. 
+                Setelah lolos uji, sistem dideploy ke lingkungan live untuk eksekusi otomatis yang efisien.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS — DARK BG, BENTO GRID
+  ═══════════════════════════════════════════ -->
+  <section id="projects" class="bg-ink py-20">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-white/70">Selected Work</span>
+        <div class="flex-1 h-px bg-white/10"></div>
+      </div>
+
+      <h2 class="text-[clamp(2.5rem,5vw,5rem)] font-black tracking-tightest text-white leading-none mb-10 reveal">
+        Projects.</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+                        <!-- [A] Grembit 10 Axiom — 7 cols -->
+        <a href="project-grembit.html"
+          class="md:col-span-12 lg:col-span-7 bg-ink-soft border border-white/10 rounded-bento overflow-hidden flex flex-col group hover:border-y/40 transition-all duration-300 reveal min-h-[460px]">
+          <div class="p-8 flex flex-col flex-1">
+            <div
+              class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase tracking-wide text-green-400 mb-4">
+              <span class="w-[4px] h-[4px] rounded-full bg-green-400"></span>Under developing
+            </div>
+            <h3 class="text-white font-black text-2xl tracking-tighter mb-2 group-hover:text-y transition-colors">
+              Grembit 10 Axiom</h3>
+            <p class="text-white/50 text-sm leading-relaxed max-w-[80%]">Koneksi langsung ke API (CCTX), pembagian
+              porsi untuk meminimalkan risiko, dan Take Profit algoritmik yang telah terkalibrasi secara matematis untuk
+              efisiensi maksimal.</p>
+          </div>
+          <div class="h-[280px] w-full bg-white/5 overflow-hidden border-t border-white/5 relative">
+            <img src="assets/grembit10-cover.png" alt="Grembit 10 Axiom"
+              class="absolute inset-0 object-cover object-left-top w-full h-full group-hover:scale-[1.03] transition-transform duration-700 ease-in-out">
+          </div>
+        </a>
+
+        <!-- [B] Grembit Mevers 7 — 5 cols -->
+        <a href="project-mevers.html"
+          class="md:col-span-12 lg:col-span-5 bg-ink-soft border border-white/10 rounded-bento overflow-hidden flex flex-col group hover:border-y/40 transition-all duration-300 reveal min-h-[460px]">
+          <div class="p-8 flex flex-col flex-1">
+            <div
+              class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase tracking-wide text-y mb-4">
+              <span class="w-[4px] h-[4px] rounded-full bg-y animate-pulse"></span>Prototype
+            </div>
+            <h3 class="text-white font-black text-2xl tracking-tighter mb-2 group-hover:text-y transition-colors">
+              Grembit Mevers 7</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Algoritma Quantitative Trading berbasis Mean Reversal yang mengintegrasikan hukum probabilitas statistik dengan struktur pasar Smart Money Concepts.</p>
+          </div>
+          <div class="h-[280px] w-full bg-white/5 overflow-hidden border-t border-white/5 relative">
+            <img src="assets/mevers-1.png" alt="Grembit Mevers 7"
+              class="absolute inset-0 object-cover object-left-top w-full h-full group-hover:scale-[1.03] transition-transform duration-700 ease-in-out">
+          </div>
+        </a>
+
+        <!-- [C] Grembit VADA — 5 cols -->
+        <a href="project-grembit-vada.html"
+          class="md:col-span-12 lg:col-span-5 bg-ink-soft border border-white/10 rounded-bento overflow-hidden flex flex-col group hover:border-y/40 transition-all duration-300 reveal min-h-[400px]">
+          <div class="p-8 flex flex-col flex-1">
+            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-green-400 mb-4">
+              <span class="w-[4px] h-[4px] rounded-full bg-green-400"></span>Active
+            </div>
+            <h3 class="text-white font-black text-2xl tracking-tighter mb-2 group-hover:text-y transition-colors">Grembit
+              VADA</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Virtual Automated Data Analyst untuk validasi
+              data yang efisien dalam memperkuat thesis pengambilan keputusan trading.</p>
+          </div>
+          <div class="h-[220px] w-full overflow-hidden border-t border-white/5 relative bg-white/5">
+            <img src="assets/vada-1.png" alt="VADA"
+              class="absolute inset-0 object-cover object-left-top w-full h-full group-hover:scale-[1.03] transition-transform duration-700 ease-in-out">
+          </div>
+        </a>
+
+        <!-- [D] Portfolio Website — 7 cols -->
+        <a href="project-portfolio.html"
+          class="md:col-span-12 lg:col-span-7 bg-y rounded-bento overflow-hidden flex flex-col group hover:shadow-y transition-all duration-300 reveal min-h-[400px]">
+          <div class="p-8 flex flex-col flex-1">
+            <div class="inline-flex items-center gap-1.5 text-[0.62rem] font-black uppercase text-ink/70 mb-4">
+              <span class="w-[4px] h-[4px] rounded-full bg-ink/70"></span>Complete
+            </div>
+            <h3 class="text-ink font-black text-2xl tracking-tighter mb-2">Portfolio Website</h3>
+            <p class="text-ink/60 text-sm leading-relaxed max-w-[80%]">Website ini dibuat dengan metode Vibe Coding dan menggunakan Tailwind CSS untuk mencapai desain premium dan responsif.</p>
+          </div>
+          <div class="h-[220px] w-full overflow-hidden border-t border-ink/10 relative bg-ink">
+            <img src="assets/about-sub1.png" alt="Portfolio"
+              class="absolute inset-0 object-cover object-left-top w-full h-full opacity-90 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-[1.03] transition-all duration-700 ease-in-out">
+          </div>
+        </a>
+
+        <!-- [E] CTA Card — full width -->
+        <div
+          class="md:col-span-12 bg-white rounded-bento p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+          <div>
+            <div class="text-[0.68rem] font-bold text-black/30 uppercase tracking-widest mb-2">More coming soon</div>
+            <h3 class="text-ink font-black text-2xl tracking-tight">Ingin ketahui dan kenal lebih lanjut?</h3>
+            <p class="text-black/50 text-sm mt-1">Silahkan cek media sosial saya.</p>
+          </div>
+          <a href="#contact"
+            class="flex-shrink-0 bg-ink text-white font-bold text-sm px-7 py-3.5 rounded-full hover:bg-y hover:text-ink transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap">
+            Get in Touch →
+          </a>
+        </div>
+
+      <h2 class="text-[clamp(2.5rem,5vw,5rem)] font-black tracking-tightest text-ink leading-none mb-10 reveal">
+        Education.</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+        <!-- Universitas — 7 cols -->
+        <div class="md:col-span-7 bg-ink border border-white/5 rounded-bento p-10 flex flex-col justify-between min-h-[280px] reveal group hover:border-y/30 transition-all duration-500">
+          <div class="flex items-center justify-between">
+            <span class="text-[0.62rem] font-black text-white/30 uppercase tracking-[2px]">Higher Education</span>
+            <span class="bg-y text-ink text-[0.65rem] font-black px-4 py-1.5 rounded-full shadow-y/20">2026</span>
+          </div>
+          <div>
+            <h3 class="text-white font-black text-3xl leading-tight tracking-tightest mb-3">
+              Universitas Widya Dharma<br><span class="text-y/80 group-hover:text-y transition-colors">Pontianak</span>
+            </h3>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-2 h-2 rounded-full bg-y blink"></span>
+              <p class="text-white/40 text-xs font-bold uppercase tracking-widest">Planned / Coming Soon</p>
+            </div>
+            <p class="text-white/40 text-sm leading-relaxed max-w-md">Langkah selanjutnya dalam perjalanan akademik saya, fokus pada pengembangan profesional dan spesialisasi sistem digital.</p>
+          </div>
+        </div>
+
+        <!-- SMA — 5 cols (Vibrant) -->
+        <div class="md:col-span-5 bg-y rounded-bento p-10 flex flex-col justify-between min-h-[280px] reveal shadow-lg hover:shadow-y/20 transition-all duration-500 relative overflow-hidden group">
+          <!-- Decoration -->
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-ink/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <div class="flex items-center justify-between relative z-10">
+            <span class="text-[0.62rem] font-black text-ink/40 uppercase tracking-[2px]">Senior High School</span>
+            <div class="bg-ink text-y text-[0.65rem] font-black px-3 py-1 rounded-md">CURRENT</div>
+          </div>
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-[0.7rem] font-bold text-ink bg-ink/10 px-3 py-1 rounded-full">2023 – 2026</span>
+            </div>
+            <h3 class="text-ink font-black text-2xl leading-[1.1] tracking-tightest mb-4">SMA Santo Paulus<br>Pontianak</h3>
+            <p class="text-ink/70 text-sm leading-relaxed font-medium">Fokus mendalam pada pengembangan fondasi diri, kemandirian akademik, dan eksplorasi minat teknologi dini.</p>
+          </div>
+        </div>
+
+        <!-- SMP — 5 cols -->
+        <div class="md:col-span-5 bg-cream border border-black/5 rounded-bento p-10 flex flex-col justify-between min-h-[260px] reveal hover:bg-white transition-colors duration-300">
+          <div class="flex items-center justify-between">
+            <span class="text-[0.62rem] font-black text-ink/30 uppercase tracking-[2px]">Junior High School</span>
+            <span class="bg-ink text-white text-[0.65rem] font-bold px-3 py-1 rounded-full">2020 – 2023</span>
+          </div>
+          <div>
+            <h3 class="text-ink font-black text-2xl leading-tight tracking-tightest mb-3 uppercase">SMP Bruder Pontianak</h3>
+            <p class="text-ink/50 text-sm leading-relaxed italic">"Masa pengenalan jati diri, pembentukan karakter, dan penemuan arah tujuan hidup primer."</p>
+          </div>
+        </div>
+
+        <!-- SD — 7 cols -->
+        <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-bento p-10 flex flex-col justify-between min-h-[260px] reveal group hover:border-white/10 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-[0.62rem] font-black text-white/20 uppercase tracking-[2px]">Elementary Education</span>
+            <div class="flex items-center gap-2">
+              <span class="text-white/20 text-[0.65rem] font-bold">2013</span>
+              <span class="w-4 h-px bg-white/10"></span>
+              <span class="text-white/20 text-[0.65rem] font-bold">2020</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+            <div>
+              <h3 class="text-white font-black text-2xl leading-tight tracking-tightest mb-3 uppercase">TK-SD Bruder Kanisius</h3>
+              <p class="text-white/40 text-xs font-bold uppercase tracking-widest text-y">Academic Foundation</p>
+            </div>
+            <p class="text-white/30 text-sm leading-relaxed">Pendidikan karakter dasar, pembiasaan disiplin, dan etika bersosialisasi dalam lingkungan inklusif.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT — CREAM BG, BENTO GRID
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="bg-y py-20">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="text-[0.68rem] font-bold uppercase tracking-[2px] text-ink/80">Get in Touch</span>
+        <div class="flex-1 h-px bg-ink/20"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+        <!-- Big CTA -->
+        <div class="md:col-span-8 bg-ink rounded-bento p-10 md:p-14 flex flex-col justify-between min-h-[320px] reveal">
+          <div class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest">Ayo berkenalan!</div>
+          <div>
+            <h2 class="text-[clamp(2.5rem,4.5vw,4rem)] font-black text-white tracking-tightest leading-[1.05] mb-5">
+              Terbuka dalam membangun<br>relasi.
+            </h2>
+            <p class="text-white/50 text-base leading-relaxed max-w-md mb-8">
+              Jika kamu ingin berkenalan dengan saya, silahkan hubungi saya, bisa melalui sosial media yang tercantum.
+            </p>
+          </div>
+        </div>
+
+        <!-- Modern Social Links directory style -->
+        <div class="md:col-span-4 bg-cream border border-ink/10 rounded-bento p-2 flex flex-col gap-1 reveal">
+
+          <a href="https://www.linkedin.com/in/gregorius-sergio-37762b300/" target="_blank" rel="noopener"
+            class="flex items-center justify-between gap-4 p-4 rounded-xl hover:bg-white transition-colors group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-ink/5 flex items-center justify-center text-ink group-hover:bg-[#0077b5] group-hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-ink font-bold text-sm">LinkedIn</div>
+                <div class="text-ink/50 text-xs mt-0.5">@gregoriussergio</div>
+              </div>
+            </div>
+            <span class="text-ink/20 group-hover:text-ink transition-colors font-bold">↗</span>
+          </a>
+
+          <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
+            class="flex items-center justify-between gap-4 p-4 rounded-xl hover:bg-white transition-colors group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-ink/5 flex items-center justify-center text-ink group-hover:bg-black group-hover:text-white transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-ink font-bold text-sm">GitHub</div>
+                <div class="text-ink/50 text-xs mt-0.5">1+ Repositories</div>
+              </div>
+            </div>
+            <span class="text-ink/20 group-hover:text-ink transition-colors font-bold">↗</span>
+          </a>
+
+          <a href="https://www.instagram.com/gregorius_gesergio/" target="_blank" rel="noopener"
+            class="flex items-center justify-between gap-4 p-4 rounded-xl hover:bg-white transition-colors group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-ink/5 flex items-center justify-center text-ink group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 group-hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="text-ink font-bold text-sm">Instagram</div>
+                <div class="text-ink/50 text-xs mt-0.5">@gregorius_gesergio</div>
+              </div>
+            </div>
+            <span class="text-ink/20 group-hover:text-ink transition-colors font-bold">↗</span>
+          </a>
+
+          <a href="https://www.tiktok.com/@gregoryp1.1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"
+            class="flex items-center justify-between gap-4 p-4 rounded-xl hover:bg-white transition-colors group">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-ink/5 flex items-center justify-center text-ink group-hover:bg-black group-hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.12-3.44-3.17-3.41-5.46.02-2.35 1.52-4.59 3.79-5.41 1.35-.49 2.87-.52 4.25-.13.01.59 0 1.18.01 1.77-1.12-.24-2.29-.11-3.32.39-1.32.61-2.24 1.92-2.34 3.39-.08 1.56.9 3.08 2.36 3.65 1.58.62 3.42.34 4.75-.76 1.15-.93 1.7-2.4 1.68-3.89-.01-5.84-.01-11.68-.02-17.51z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-ink font-bold text-sm">TikTok</div>
+                <div class="text-ink/50 text-xs mt-0.5">@sergiop1.1</div>
+              </div>
+            </div>
+            <span class="text-ink/20 group-hover:text-ink transition-colors font-bold">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER — PROFESSIONAL, BLACK BG
+  ═══════════════════════════════════════════ -->
+  <footer class="bg-ink border-t border-white/5">
+    <!-- Top footer -->
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12 py-14 grid grid-cols-1 md:grid-cols-4 gap-12">
+
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <a href="#hero" class="flex items-center gap-2.5 mb-4">
+          <img src="assets/profile-hero.png" alt=""
+            class="w-9 h-9 rounded-full object-cover ring-2 ring-white/10 grayscale">
+          <span class="font-black text-white text-base tracking-tight">Gregorius Sergio</span>
+        </a>
+        <p class="text-white/40 text-sm leading-relaxed max-w-xs">
+          Focused on Self developing, Crypto Trading, and learning new things. Based in
+          Pontianak, Indonesia.
+        </p>
+        <div class="flex gap-3 mt-6">
+          <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-sm font-bold">
+            GH
+          </a>
+          <a href="https://www.linkedin.com/in/gregorius-sergio-37762b300/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-sm font-bold">
+            LI
+          </a>
+          <a href="https://www.instagram.com/gregorius_gesergio/" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-sm font-bold">
+            IG
+          </a>
+          <a href="https://www.tiktok.com/@gregoryp1.1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"
+            class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-y hover:text-ink hover:border-y transition-all text-sm font-bold">
+            TK
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav links -->
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Navigation</h5>
+        <ul class="space-y-3">
+          <li><a href="#about" class="text-sm text-white/50 hover:text-white transition-colors">About</a></li>
+          <li><a href="#workflow" class="text-sm text-white/50 hover:text-white transition-colors">Workflow</a></li>
+          <li><a href="#projects" class="text-sm text-white/50 hover:text-white transition-colors">Projects</a></li>
+          <li><a href="#education" class="text-sm text-white/50 hover:text-white transition-colors">Education</a></li>
+          <li><a href="#contact" class="text-sm text-white/50 hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Projects links -->
+      <div>
+        <h5 class="text-[0.68rem] font-bold text-white/30 uppercase tracking-widest mb-5">Projects</h5>
+        <ul class="space-y-3">
+          <li><a href="project-grembit.html" class="text-sm text-white/50 hover:text-white transition-colors">Grembit 10
+              Axiom</a></li>
+          <li><a href="project-grembit-vada.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Grembit VADA</a></li>
+          <li><a href="project-portfolio.html"
+              class="text-sm text-white/50 hover:text-white transition-colors">Portfolio Website</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/5">
+      <div
+        class="w-full max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <span class="text-xs text-white/25">© 2025 Gregorius Sergio. All rights reserved.</span>
+        <span class="text-xs text-white/25">Built with <span class="text-y">Tailwind CSS and Vibe Coded</span> ·
+          Deployed on GitHub
+          Pages</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    // Mobile nav
+    const hbg = document.getElementById('hbg');
+    const mnav = document.getElementById('mnav');
+    const hbs = document.querySelectorAll('.hb');
+
+    function toggleNav() {
+      const open = hbg.classList.toggle('open');
+      mnav.style.display = open ? 'flex' : 'none';
+      hbs[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+      hbs[1].style.opacity = open ? '0' : '';
+      hbs[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+    }
+    function closeNav() {
+      hbg.classList.remove('open');
+      mnav.style.display = 'none';
+      hbs.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+    }
+
+    // Nav on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').style.boxShadow =
+        window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.4)' : 'none';
+    }, { passive: true });
+
+    // Scroll reveal
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+
+</body>
+
+</html>
+>>>>>>> 33c46fb (Update: replace Tools & Tech with detailed My Workflow section)
