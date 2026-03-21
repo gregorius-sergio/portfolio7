@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grembit VADA | Gregorius Sergio</title>
-  <meta name="description" content="Grembit VADA — advanced volume and delta analysis tool by Gregorius Sergio.">
+  <meta name="description" content="Grembit VADA â€” advanced volume and delta analysis tool by Gregorius Sergio.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -44,7 +44,7 @@
       transform: scale(1.04);
     }
 
-    /* ═══ MOBILE-FIRST OPTIMIZATIONS ═══ */
+    /* â•â•â• MOBILE-FIRST OPTIMIZATIONS â•â•â• */
     @media (max-width: 767px) {
       .rounded-bento { border-radius: 16px; }
       .img-zoom:hover img { transform: none; }
@@ -65,7 +65,7 @@
       Gregorius Sergio
     </a>
     <a href="index.html#projects"
-      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">←
+      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">â†
       All Projects</a>
     <button id="hbg" onclick="toggleNav()"
       class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer">
@@ -78,17 +78,17 @@
     <a href="index.html#about" onclick="closeNav()"
       class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">About</a>
     <a href="index.html#projects" onclick="closeNav()"
-      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">← Projects</a>
-    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-[#E2FF00]">Contact →</a>
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">â† Projects</a>
+    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-[#E2FF00]">Contact â†’</a>
   </div>
 
-  <!-- ── HERO: BLACK ── -->
+  <!-- â”€â”€ HERO: BLACK â”€â”€ -->
   <section class="bg-ink pt-16 pb-0">
     <div class="w-full max-w-7xl mx-auto px-5 md:px-12 py-10 md:py-16">
       <div
         class="flex items-center gap-2 text-[0.68rem] text-white/30 font-bold uppercase tracking-widest mb-10 reveal">
-        <a href="index.html" class="hover:text-[#E2FF00] transition-colors">Home</a><span>›</span>
-        <a href="index.html#projects" class="hover:text-[#E2FF00] transition-colors">Projects</a><span>›</span>
+        <a href="index.html" class="hover:text-[#E2FF00] transition-colors">Home</a><span>â€º</span>
+        <a href="index.html#projects" class="hover:text-[#E2FF00] transition-colors">Projects</a><span>â€º</span>
         <span class="text-white/60">Grembit VADA</span>
       </div>
       <!-- Polished Hero Grid (7-5 Split) -->
@@ -126,94 +126,86 @@
     </div>
   </section>
 
-  <!-- ── OVERVIEW SECTION (SUBTLE CONTRAST) ── -->
-  <section class="bg-[#FAFAFA] py-24">
-    <div class="w-full max-w-7xl mx-auto px-5 md:px-12">
-      <!-- Top Row: Narrative (Interactive Slide Boxes) -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 mb-10 md:mb-20">
-        <div class="md:col-span-8 bg-ink rounded-[24px] md:rounded-[40px] p-7 md:p-16 reveal overflow-hidden relative shadow-lg group">
-          <div class="absolute -top-10 -right-10 text-[10rem] font-black text-white/[0.03] select-none uppercase leading-none group-hover:scale-110 transition-transform duration-700">VADA</div>
-          <span class="text-[0.65rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-8">Microstructure</span>
-          <h2 class="text-2xl md:text-5xl font-black text-white tracking-tightest leading-[1.1] mb-6 md:mb-10 uppercase">
+  <!-- â”€â”€ OVERVIEW SECTION (SUBTLE CONTRAST) â”€â”€ -->
+  <!-- ── DETAIL: TWIN-SCROLL NARRATIVE ── -->
+  <section class="bg-[#0A0A0A] py-16 md:py-24 relative">
+    <div class="w-full max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+      
+      <!-- Left: Sticky Title (1/3) -->
+      <div class="lg:col-span-4 hidden lg:block">
+        <div class="sticky top-32 reveal">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-px bg-[#E2FF00]/30"></span>
+            <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]/50">Deep Dive</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tightest mb-6">
             Research and<br>Surface Analysis.
           </h2>
-          <p class="text-white/50 text-base leading-relaxed max-w-xl">Grembit <span class="text-white font-bold">VADA</span> adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar melalui analisis delta mendalam.</p>
-          
-          <!-- Slide Box on Hover -->
-          <div class="absolute inset-x-0 bottom-0 bg-[#E2FF00] p-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-center justify-between">
-            <p class="text-ink font-bold text-sm uppercase tracking-wide">Memetakan jejak harga yang dapat dijadikan sebagai peluang.</p>
-            <span class="text-ink/30 font-black text-4xl">01</span>
+          <p class="text-white/40 text-sm leading-relaxed mb-10">Grembit VADA adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar melalui analisis delta mendalam. Memetakan jejak harga yang dapat dijadikan peluang.</p>
+        </div>
+      </div>
+
+      <!-- Right: Scrolling Visuals & Data (2/3) -->
+      <div class="lg:col-span-8 flex flex-col gap-6 md:gap-10 border-l-0 lg:border-l border-white/5 lg:pl-10">
+        
+        <!-- Deep Dive Mobile Title -->
+        <div class="lg:hidden reveal mb-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-px bg-[#E2FF00]/30"></span>
+            <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]/50">Deep Dive</span>
+          </div>
+          <h2 class="text-3xl font-black text-white leading-tight tracking-tightest mb-4">Research and Surface Analysis.</h2>
+          <p class="text-white/40 text-sm leading-relaxed">Grembit VADA adalah instrumen riset yang didesain untuk mengungkap psikologi pelaku pasar.</p>
+        </div>
+
+        <!-- Box 01: Delta --->
+        <div class="glass-2-0 liquid-glass-glow rounded-[24px] p-7 md:p-12 reveal shadow-lg group">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Module 1</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-[#E2FF00] transition-colors relative z-10">Delta Analysis</h3>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">Identifikasi ketidakseimbangan beli dan jual secara <span class="text-[#E2FF00] font-bold">real-time</span> menggunakan On-Chain Data dan Delta Inspection.</p>
+          <div class="w-full h-[200px] md:h-[280px] rounded-[16px] overflow-hidden mt-6 border border-white/5 relative z-10">
+            <img src="assets/vada-2.png" alt="VADA Module" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A0A0A]/60 to-transparent pointer-events-none"></div>
           </div>
         </div>
 
-        <div class="md:col-span-4 bg-[#E2FF00] rounded-[24px] md:rounded-[40px] p-7 md:p-12 flex flex-col justify-between reveal shadow-lg group relative overflow-hidden">
-          <div class="relative z-10">
-            <span class="text-[0.6rem] font-black text-ink/30 uppercase tracking-[0.3em] block mb-4">Market Alpha</span>
-            <h3 class="text-ink font-black text-3xl tracking-tightest leading-tight uppercase">Deep<br>Data Proof.</h3>
-          </div>
-          <p class="text-ink/60 text-xs font-bold uppercase tracking-widest leading-relaxed mt-12 relative z-10">Mendeteksi jejak penjualan dan pembelian melalui anomali di berbagai pasar.</p>
+        <!-- Box 02: Microstructure --->
+        <div class="glass-2-0 liquid-glass-glow rounded-[24px] p-7 md:p-12 reveal shadow-lg group">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Module 2</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-4 group-hover:text-[#E2FF00] transition-colors relative z-10">Microstructure</h3>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">Visualisasi kedalaman pasar untuk mendeteksi penumpukan tersembunyi yang dilakukan oleh para Market Makers maupun entitas besar.</p>
           
-          <!-- Hover reveal overlay -->
-          <div class="absolute inset-0 bg-ink transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 flex flex-col justify-center p-10">
-            <span class="text-[#E2FF00] font-black text-[0.6rem] uppercase tracking-widest mb-4">Alpha</span>
-            <p class="text-white text-xs font-bold leading-relaxed uppercase">Real-time  Flow & Price Imbalance.</p>
+          <div class="flex flex-col gap-4 mt-6 relative z-10">
+            <div class="bg-white/[0.02] border border-white/5 rounded-[16px] p-5 hover:bg-white/5 transition-colors">
+              <h4 class="text-[#E2FF00] font-bold text-sm mb-2">Anomalies:</h4>
+              <p class="text-white/50 text-xs md:text-sm leading-relaxed">Mendeteksi pergerakan yang tidak wajar pada data yang dihasilkan sebagai penanda terjadinya momentum atau manipulasi.</p>
+            </div>
+            <div class="bg-white/[0.02] border border-white/5 rounded-[16px] p-5 hover:bg-white/5 transition-colors">
+              <h4 class="text-[#E2FF00] font-bold text-sm mb-2">Validation:</h4>
+              <p class="text-white/50 text-xs md:text-sm leading-relaxed">Kalkulasi dari indikator harga secara otomatis untuk memvalidasi setup dengan presisi probabilitas ekstrem.</p>
+            </div>
           </div>
         </div>
+
+        <!-- Box 03: Proof & Detail --->
+        <div class="glass-2-0 liquid-glass-glow rounded-[24px] p-7 md:p-12 reveal shadow-lg group">
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] block mb-5">Insight Proof</span>
+          <h3 class="text-white font-black text-2xl md:text-3xl tracking-tighter mb-8 group-hover:text-[#E2FF00] transition-colors relative z-10">Data Visualization</h3>
+          
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl mb-6 relative z-10">
+            Akses langsung ke raw data dan visualisasinya membantu memitigasi bias. Dengan memetakan data <span class="text-white font-bold">Flow & Price Imbalance</span>, VADA mengungkap apa yang disembunyikan oleh pergerakan harga.
+          </p>
+
+          <div class="w-full h-[260px] md:h-[350px] rounded-[16px] overflow-hidden mt-6 border border-white/5 relative z-10">
+            <img src="assets/vada-3.png" alt="VADA Proof" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A0A0A]/60 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
-
-  <!-- ── FEATURE SECTION (SUBTLE CONTRAST) ── -->
-  <section class="bg-[#FAFAFA] pb-12">
-    <div class="w-full max-w-7xl mx-auto px-5 md:px-12">
-      <div class="flex items-center gap-3 mb-10 reveal">
-        <span class="text-[0.6rem] font-black uppercase tracking-[0.3em] text-ink/30">Analysis Modules</span>
-        <div class="flex-1 h-px bg-ink/5"></div>
-      </div>
-      
-      <!-- Varied Bento Grid (Full) -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-        <!-- Box 01: Large Zinc (New color) -->
-        <div class="md:col-span-8 bg-[#EFEFEF] rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm relative overflow-hidden group">
-          <div class="absolute -bottom-4 -right-4 text-ink/[0.02] text-7xl md:text-9xl font-black select-none uppercase group-hover:scale-110 transition-transform">FLOW</div>
-          <h4 class="text-ink/40 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-10">01 / Flow</h4>
-          <h3 class="text-ink font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Delta Analysis</h3>
-          <p class="text-ink/80 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md mb-6">Identifikasi ketidakseimbangan beli dan jual secara real-time.</p>
-          <div class="flex gap-2">
-            <span class="text-[0.55rem] font-black bg-ink/10 px-3 py-1.5 rounded-full uppercase tracking-tighter text-ink/80">On-Chain Data</span>
-            <span class="text-[0.55rem] font-black bg-ink/10 px-3 py-1.5 rounded-full uppercase tracking-tighter text-ink/80">Delta Inspection</span>
-          </div>
-        </div>
-
-        <!-- Box 02: Small Black -->
-        <div class="md:col-span-4 bg-ink rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md group">
-          <h4 class="text-white/50 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-12">02 / Depth</h4>
-          <h3 class="text-white font-black text-2xl tracking-tighter uppercase mb-4">Microstructure</h3>
-          <p class="text-white/80 text-[0.75rem] font-bold leading-relaxed uppercase mb-6">Visualisasi kedalaman pasar untuk mendeteksi penumpukan tersembunyi.</p>
-          <div class="bg-[#E2FF00]/20 h-1.5 w-full rounded-full overflow-hidden"><div class="bg-[#E2FF00] h-full" style="width: 65%"></div></div>
-        </div>
-
-        <!-- Box 03: Small Yellow -->
-        <div class="md:col-span-5 bg-[#E2FF00] rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal hover:-translate-y-1 transition-all shadow-md group">
-          <h4 class="text-ink/40 text-[0.6rem] font-black uppercase tracking-[0.4em] mb-12">03 / Signal</h4>
-          <h3 class="text-ink font-black text-2xl tracking-tighter uppercase mb-4">Anomalies</h3>
-          <p class="text-ink/80 text-[0.75rem] font-bold leading-relaxed uppercase">Mendeteksi pergerakan yang tidak wajar pada data yang dihasilkan sebagai penanda terjadinya momentum.</p>
-        </div>
-
-        <!-- Box 04: Large Zinc/Light Gray -->
-        <div class="md:col-span-7 bg-[#E5E5E5] rounded-[20px] md:rounded-[32px] p-6 md:p-10 reveal border border-ink/5 hover:shadow-xl transition-all shadow-sm group">
-          <div class="flex justify-between items-start mb-12">
-            <h4 class="text-ink/40 text-[0.6rem] font-black uppercase tracking-[0.4em]">04 / Proof</h4>
-            <div class="w-10 h-10 rounded-full bg-ink flex items-center justify-center text-[#E2FF00] font-black text-xs group-hover:rotate-12 transition-transform shadow-sm">V</div>
-          </div>
-          <h3 class="text-ink font-black text-2xl md:text-3xl tracking-tighter uppercase mb-6">Validation</h3>
-          <p class="text-ink/80 text-[0.75rem] md:text-sm leading-relaxed uppercase font-bold tracking-wide max-w-md">Kalkulasi dari indikator harga secara otomatis untuk memvalidasi setup dengan presisi probabilitas tinggi.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SCREENSHOTS: CREAM ── -->
+  <!-- â”€â”€ SCREENSHOTS: CREAM â”€â”€ -->
   <section class="bg-cream py-12">
     <div class="w-full max-w-7xl mx-auto px-5 md:px-12">
       <div class="flex items-center gap-3 mb-8 reveal">
@@ -237,7 +229,7 @@
     </div>
   </section>
 
-  <!-- ── CONTACT STRIP: BLACK ── -->
+  <!-- â”€â”€ CONTACT STRIP: BLACK â”€â”€ -->
   <section class="bg-ink py-16">
     <div class="w-full max-w-7xl mx-auto px-5 md:px-12">
       <div
@@ -251,7 +243,7 @@
         <div class="flex flex-wrap gap-3 flex-shrink-0">
           <a href="index.html#contact"
             class="bg-[#E2FF00] text-ink font-bold text-sm px-8 py-3.5 rounded-full hover:bg-[#E2FF00]-dark transition-all hover:-translate-y-0.5 shadow-sm">See
-            Social Links →</a>
+            Social Links â†’</a>
         </div>
       </div>
     </div>
@@ -309,8 +301,8 @@
     <div class="border-t border-white/5">
       <div
         class="w-full max-w-7xl mx-auto px-5 md:px-12 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-        <span class="text-xs text-white/25">© 2025 Gregorius Sergio. All rights reserved.</span>
-        <span class="text-xs text-white/25">Built with <span class="text-[#E2FF00]">Tailwind CSS and Vibe coded</span> ·
+        <span class="text-xs text-white/25">Â© 2025 Gregorius Sergio. All rights reserved.</span>
+        <span class="text-xs text-white/25">Built with <span class="text-[#E2FF00]">Tailwind CSS and Vibe coded</span> Â·
           Deployed on GitHub Pages</span>
       </div>
     </div>
