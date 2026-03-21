@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grembit Mevers 7 | Gregorius Sergio</title>
   <meta name="description"
-    content="Grembit Mevers 7 â€” Mean reversion strategy algorithmic trading system by Gregorius Sergio.">
+    content="Grembit Mevers 7 — Mean reversion strategy algorithmic trading system by Gregorius Sergio.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -66,7 +66,7 @@
       Gregorius Sergio
     </a>
     <a href="index.html#projects"
-      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">â†
+      class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors uppercase tracking-widest">←
       All Projects</a>
     <button id="hbg" onclick="toggleNav()"
       class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer">
@@ -79,55 +79,58 @@
     <a href="index.html#about" onclick="closeNav()"
       class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">About</a>
     <a href="index.html#projects" onclick="closeNav()"
-      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">â† Projects</a>
-    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-[#E2FF00]">Contact â†’</a>
+      class="py-3 border-b border-white/5 text-sm text-white/70 hover:text-[#E2FF00] transition-colors">← Projects</a>
+    <a href="index.html#contact" onclick="closeNav()" class="py-3 text-sm font-bold text-[#E2FF00]">Contact ←’</a>
   </div>
 
   <!-- â”€â”€ HERO: BLACK â”€â”€ -->
-  <section class="bg-ink pt-16 pb-0">
+  <section class="bg-[#0A0A0A] pt-16 pb-0 relative">
+    
+    <!-- Background Ambient Glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#E2FF00]/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
     <div class="w-full max-w-7xl mx-auto px-5 md:px-12 py-10 md:py-16">
       <!-- Breadcrumb -->
       <div
         class="flex items-center gap-2 text-[0.68rem] text-white/30 font-bold uppercase tracking-widest mb-10 reveal">
         <a href="index.html" class="hover:text-[#E2FF00] transition-colors">Home</a>
-        <span>â€º</span>
+        <span>›</span>
         <a href="index.html#projects" class="hover:text-[#E2FF00] transition-colors">Projects</a>
-        <span>â€º</span>
+        <span>›</span>
         <span class="text-white/60">Grembit Mevers 7</span>
       </div>
 
       <!-- Polished Hero Grid -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 items-stretch">
         <!-- Main Title Card -->
-        <div class="md:col-span-7 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] p-6 md:p-10 flex flex-col justify-center reveal">
-          <div class="inline-flex items-center gap-2 text-[0.6rem] font-black uppercase text-[#E2FF00]/90 bg-[#E2FF00]/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-y/20">
+        <div class="md:col-span-12 lg:col-span-7 glass-2-0 liquid-glass-glow rounded-bento p-6 md:p-10 flex flex-col justify-center reveal">
+          <div class="inline-flex items-center gap-2 text-[0.62rem] font-black uppercase text-[#E2FF00] bg-[#E2FF00]/10 px-4 py-1.5 rounded-full w-fit mb-6 border border-[#E2FF00]/20 relative z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-[#E2FF00] animate-pulse"></span>Prototype / Under Developing
           </div>
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tightest leading-[1] text-white mb-6 uppercase">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tightest leading-[1] text-white mb-6 uppercase relative z-10">
             Grembit Mevers<br><span class="text-[#E2FF00]">7</span>
           </h1>
-          <p class="text-white/40 text-sm leading-relaxed max-w-sm">Algoritma Quantitative Trading berbasis Mean Reversal yang mengintegrasikan hukum probabilitas statistik dengan struktur pasar Smart Money Concepts.</p>
+          <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-lg relative z-10 font-medium">Algoritma Quantitative Trading berbasis Mean Reversal yang mengintegrasikan hukum probabilitas statistik dengan struktur pasar Smart Money Concepts.</p>
         </div>
 
         <!-- Image Card -->
-        <div class="md:col-span-5 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] overflow-hidden reveal relative group flex items-center justify-center p-2 md:p-3">
+        <div class="md:col-span-12 lg:col-span-5 glass-2-0 liquid-glass-glow rounded-bento overflow-hidden reveal relative flex items-center justify-center p-3">
           <img src="assets/mevers-1.png" alt="Mevers 7" class="w-full h-auto rounded-[18px] md:rounded-[32px] shadow-2xl transition-transform duration-1000 group-hover:scale-[1.02] grayscale group-hover:grayscale-0">
           <div class="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
         </div>
       </div>
 
       <!-- Compact Tech Stack Bar -->
-      <div class="mt-6 md:mt-10 md:col-span-12 bg-ink-soft border border-white/5 rounded-[24px] md:rounded-[40px] p-6 md:px-12 md:py-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-8 reveal">
+      <div class="mt-5 md:mt-8 md:col-span-12 glass-2-0 liquid-glass-glow rounded-bento p-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-8 reveal">
         <div class="flex flex-col">
-          <span class="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] mb-0.5">Architecture</span>
-          <span class="text-white/60 font-bold text-xs uppercase tracking-wider">Mean Reversion Engine</span>
+          <span class="text-[0.6rem] font-black text-white/30 uppercase tracking-[0.4em] mb-1">Architecture</span>
+          <span class="text-white/80 font-bold text-xs uppercase tracking-wider">Mean Reversion Engine</span>
         </div>
         <div class="flex flex-wrap gap-2 justify-center">
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default uppercase">PYTHON</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default uppercase">BINANCE API</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default uppercase">PANDAS</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default uppercase">NUMPY</span>
-          <span class="text-[0.6rem] font-black text-white bg-white/5 border border-white/10 px-5 py-2 rounded-full hover:bg-[#E2FF00] hover:text-ink transition-all cursor-default uppercase">SCIKIT LEARN</span>
+          <span class="text-[0.62rem] font-black text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#E2FF00] hover:text-[#0A0A0A] hover:border-[#E2FF00] transition-all cursor-default uppercase relative z-10">PYTHON</span>
+          <span class="text-[0.62rem] font-black text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#E2FF00] hover:text-[#0A0A0A] hover:border-[#E2FF00] transition-all cursor-default uppercase relative z-10">BINANCE API</span>
+          <span class="text-[0.62rem] font-black text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#E2FF00] hover:text-[#0A0A0A] hover:border-[#E2FF00] transition-all cursor-default uppercase relative z-10">PANDAS</span>
+          <span class="text-[0.62rem] font-black text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#E2FF00] hover:text-[#0A0A0A] hover:border-[#E2FF00] transition-all cursor-default uppercase relative z-10">NUMPY</span>
+          <span class="text-[0.62rem] font-black text-white bg-white/5 border border-white/10 px-6 py-2.5 rounded-full hover:bg-[#E2FF00] hover:text-[#0A0A0A] hover:border-[#E2FF00] transition-all cursor-default uppercase relative z-10">SCIKIT LEARN</span>
         </div>
       </div>
     </div>
@@ -144,10 +147,10 @@
             <span class="w-8 h-px bg-[#E2FF00]/30"></span>
             <span class="text-[0.68rem] font-black uppercase tracking-[0.2em] text-[#E2FF00]/50">Deep Dive</span>
           </div>
-          <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tightest mb-6">
+          <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tightest mb-6 relative z-10">
             Market Inefficiency<br>Synthesizer.
           </h2>
-          <p class="text-white/40 text-sm leading-relaxed mb-10">Grembit Mevers 7 merupakan kerangka kerja kuantitatif performa tinggi yang dirancang untuk menangkap inefisiensi pasar melalui arsitektur yang adaptif. Dengan mensintesis pola likuiditas struktural dan deviasi statistik.</p>
+          <p class="text-white/40 text-sm md:text-base leading-relaxed mb-10 relative z-10 font-medium">Grembit Mevers 7 merupakan kerangka kerja kuantitatif performa tinggi yang dirancang untuk menangkap inefisiensi pasar melalui arsitektur yang adaptif. Dengan mensintesis pola likuiditas struktural dan deviasi statistik.</p>
         </div>
       </div>
 
@@ -255,7 +258,7 @@
           <img src="assets/profile-hero.png" alt="" class="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 grayscale group-hover:grayscale-0 transition-all duration-500">
           <span class="font-black text-white text-xl tracking-tight">Gregorius Sergio</span>
         </a>
-        <p class="text-white/40 text-sm leading-relaxed max-w-sm">Focused on System Architecture, Data Precision, and UI/UX Mastery. Based in Pontianak, Indonesia.</p>
+        <p class="text-white/60 text-sm md:text-base leading-relaxed max-w-lg relative z-10 font-medium">Focused on System Architecture, Data Precision, and UI/UX Mastery. Based in Pontianak, Indonesia.</p>
         <div class="flex gap-4 mt-8">
           <a href="https://github.com/gregorius-sergio" target="_blank" rel="noopener"
             class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[#E2FF00] hover:text-[#0A0A0A] transition-all text-xs font-bold">GH</a>
