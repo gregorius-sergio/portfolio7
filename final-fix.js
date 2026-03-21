@@ -6,11 +6,10 @@ for (const f of files) {
   let content = fs.readFileSync(f, 'utf8');
 
   // CLEAN UP DEEP DIVE STICKY SIDE
-  // Remove any messy leftovers from previous regex attempts
   const sidebarPattern = /<!-- Left: Sticky Title \(1\/3\) -->[\s\S]*?<!-- Right: Scrolling Visuals & Data \(2\/3\) -->/;
   
-  // Find project specific info to restore
   const titleMatch = content.match(/<h2 class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tightest mb-6 relative z-10">\s*([\s\S]*?)\s*<\/h2>/) 
+                    || content.match(/<h2 class="text-3xl lg:text-4xl font-black text-\[#0A0A0A\] leading-tight tracking-tightest mb-6 relative z-10">\s*([\s\S]*?)\s*<\/h2>/)
                     || content.match(/<h2 class="text-4xl font-black text-\[#0A0A0A\] leading-tight tracking-tightest mb-8 relative z-10">\s*([\s\S]*?)\s*<\/h2>/);
   
   const paraMatch = content.match(/<p class="text-white\/40 text-sm md:text-base leading-relaxed mb-10 relative z-10 font-medium">\s*([\s\S]*?)\s*<\/p>/)
@@ -18,7 +17,7 @@ for (const f of files) {
 
   if (titleMatch && paraMatch) {
     const title = titleMatch[1].trim();
-    const para = paraMatch[2].trim();
+    const para = paraMatch[1].trim();
 
     const cleanSidebar = `<!-- Left: Sticky Title (1/3) -->
       <div class="lg:col-span-4 hidden lg:block">
@@ -39,14 +38,17 @@ for (const f of files) {
     content = content.replace(sidebarPattern, cleanSidebar);
   }
 
-  // Ensure HERO CARD is Glass with White text
+  // Restore Glass Hero Card
   content = content.replace(/class="md:col-span-12 lg:col-span-7 bg-\[#E2FF00\] rounded-bento p-6 md:p-10 flex flex-col justify-center reveal shadow-\[0_20px_50px_rgba\(226,255,0,0\.15\)\]/g,
     'class="md:col-span-12 lg:col-span-7 glass-2-0 liquid-glass-glow rounded-bento p-6 md:p-10 flex flex-col justify-center reveal"');
 
-  // Fix any remaining black text issues in the Hero
+  // Fix text colors
   content = content.replace(/text-\[#0A0A0A\]/g, 'text-white');
   content = content.replace(/text-\[#0A0A0A\]\/70/g, 'text-white/40');
+  
+  // Ensure rounded-bento is used everywhere
+  content = content.replace(/rounded-\[32px\]/g, 'rounded-bento');
 
   fs.writeFileSync(f, content, 'utf8');
 }
-console.log('Project pages finalized: Sticky Deep Dive restored to Glass/Text and Hero restored to Glass.');
+console.log('Project pages finalized: Premium Glass Theme fully restored.');
